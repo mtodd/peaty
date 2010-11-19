@@ -1,0 +1,67 @@
+h1. Peaty
+
+Peaty (PT, 'pee-tee'): A PivotalTracker API Client
+
+h2. Usage
+
+NOTE: This is not live and only reference while development is still early.
+
+<pre>
+class User < ActiveRecord::Base
+  pivotal_tracker_for :pivotal_tracker_api_key, :method_prefix => :pt, :table_prefix => :pt
+end
+
+u = User.first
+
+team = []
+releases = []
+
+u.pt_projects.each do |project|
+  project.stories.all
+  project.releases.all
+  project.stories(:type => :releases)
+  
+  # add team members to team list
+  team.concat project.users # but ensure uniqueness later
+  
+  # collect our releases
+  releases.concat project.releases
+end
+</pre>
+
+See how current API works for selecting types of stories (chores, bugs, releases, and features)
+
+h2. Contributing
+
+Step 1: Submit a failing test.
+Step 2: ???
+Step 3: Profit.
+
+h2. Other PivotalTracker RubyGems
+
+* https://github.com/joslynesser/pivotal_tracker
+* https://github.com/jsmestad/pivotal-tracker
+
+h2. License
+
+The MIT License
+
+Copyright (c) 2010 Matt Todd, Highgroove Studios.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
