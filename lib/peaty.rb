@@ -109,7 +109,7 @@ module Peaty
   class Project < Base
     
     def stories(options = {})
-      Proxy.new(Story, self.class.connection, options)
+      Proxy.new(Story, self.class.connection, options.merge(:project_id => self.id))
     end
     
     class << self
@@ -136,10 +136,10 @@ module Peaty
         "story"
       end
       def collection_path(options = {})
-        "/projects/%i/stories" % options[:project].id
+        "/projects/%i/stories" % options[:project_id].to_i
       end
       def member_path(id, options = {})
-        "/projects/%i/stories/%i" % [options[:project].id, id]
+        "/projects/%i/stories/%i" % [options[:project_id].to_i, id]
       end
     end
   end
