@@ -1,0 +1,2505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stories type="array" count="136" total="136">
+  <story>
+    <id type="integer">5538713</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538713</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>* Delay in reporting data
+* Possible service interruption of Admin API</description>
+    <name>Note to martin on migration</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 16:05:32 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:15:51 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/07 15:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538346</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538346</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Ensure tmp/restart is being touched after deploys to restart passenger</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 15:50:01 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:22:53 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/07 12:22:53 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5553268</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5553268</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>knife ec2 server create &quot;role[demandbase_api_slave]&quot; --region us-east-1 -Z us-east-1b -f m1.large -i ami-ac07f2c5 -G default -x ubuntu -S demandbase-keypair
+
+i-f0ef0a9d
+ec2-174-129-87-102.compute-1.amazonaws.com
+domU-12-31-39-01-61-A1.compute-1.internal
+
+i-4afd1827
+ec2-174-129-143-208.compute-1.amazonaws.com
+domU-12-31-39-10-71-E2.compute-1.internal
+</description>
+    <name>Launch beefier replacement slaves for AutoComplete</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/07 11:24:19 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 13:04:04 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/07 13:04:04 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5561352</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5561352</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Email ML RE: picker.demandbase.com, check logs</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/07 17:51:00 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 17:51:31 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/07 17:51:31 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5554162</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5554162</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>X Create new ELB: &quot;autocomplete-external&quot;
+X Add instances to it.
+XSubmit DNS change request for autocomplete.demandbase.com
+X Verify DNS is updated
+X Verify nobody is using picker.demandbase.com
+X Remove old ELB 
+X Submit request to remove picker.demandbase.com from DNS 
+
+Commands:
+
+elb-create-lb autocomplete-external --availability-zones us-east-1b --listener &quot;protocol=HTTP,lb-port=80,instance-port=80&quot; --listener &quot;protocol=TCP,lb-port=443,instance-port=443&quot;
+
+elb-register-instances-with-lb --lb autocomplete-external --instances i-f0ef0a9d, i-4afd1827
+
+elb-describe-instance-health autocomplete-external</description>
+    <name>Rename picker-external ELB to more closely match AutoComplete branding</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/07 12:01:47 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 09:07:50 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538402</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538402</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description># @newmaster reassign Elastic IP to i-6e799b03
+</description>
+    <name>Move Elastic IP from old master to new master</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 15:53:10 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 09:08:02 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5582118</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5582118</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description># @newmaster start rabbitmq
+/etc/init.d/rabbitmq-server start
+
+# @slaves restart replication, restart apache
+echo &quot;start slave;&quot; | mysql
+/etc/init.d/apache2 restart
+</description>
+    <name>Reenable service on new master</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/08 17:08:57 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 09:08:09 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538600</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538600</url>
+    <estimate type="integer">3</estimate>
+    <current_state>accepted</current_state>
+    <description>* stopping slave replication everywhere
+* stop all services on master that do write
+** disable resque worker
+* rsync data to new 
+* verify MySQL working on new master</description>
+    <name>Migrate data from live master to new master</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 16:02:18 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 12:28:36 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2671706</id>
+        <text># @currentmaster flush tables and write lock
+echo &quot;flush tables; lock table  write lock;&quot; | mysql
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 17:08:27 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2671721</id>
+        <text># @slaves disable replication
+echo &quot;stop slave;&quot; | mysql
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 17:10:40 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2672711</id>
+        <text>IGNORE ABOVE FLUSH TABLES:
+
+# @newmaster disable resque worker (mysql writes)
+vim /etc/crontab
+  # resque_worker_lifeline
+kill -9 $RESQUE_PID
+
+# @currentmaster &amp; @newmaster stop mysql
+/etc/init.d/mysql stop
+
+# @newmaster rsync over data dir
+rsync -avz root@10.201.191.63:/db/ /db/
+
+# @newmaster start MySQL
+/etc/init.d/mysql start
+
+# @newmaster set root password correctly
+echo &quot;SET PASSWORD=PASSWORD('H_eBV2Oc5QT9ghzINIwp');&quot; | mysql
+# look up password from /etc/mysql/my.cnf
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 19:30:51 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5538611</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538611</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>knife ec2 server create &quot;role[demandbase_api_slave]&quot; --region us-east-1 -Z us-east-1b -f m1.large -i ami-ac07f2c5 -G default -x ubuntu -S demandbase-keypair
+
+ELBs/IPs:
+* put 2 in api-internal
+* reassign API SSL IP
+* put 2 in autocomplete-external
+</description>
+    <name>Set up new slaves pointing to new master</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 16:02:55 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 12:28:48 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2673071</id>
+        <text># API Slaves
+
+i-f2fd119f
+ec2-184-73-34-188.compute-1.amazonaws.com
+domU-12-31-39-0B-5D-71.compute-1.internal
+
+i-28fb1745
+ec2-184-73-110-10.compute-1.amazonaws.com
+domU-12-31-39-01-64-51.compute-1.internal
+
+# SSL
+i-6af71b07
+ec2-174-129-93-94.compute-1.amazonaws.com
+domU-12-31-39-0B-DE-02.compute-1.internal
+
+# AutoComplete
+i-66f71b0b
+ec2-67-202-32-30.compute-1.amazonaws.com
+domU-12-31-39-0B-DC-F2.compute-1.internal
+
+i-62f71b0f
+ec2-184-72-79-82.compute-1.amazonaws.com
+domU-12-31-39-0B-DC-12.compute-1.internal
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 21:09:50 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2673175</id>
+        <text>elb-register-instances-with-lb api-internal --instances i-f2fd119f,i-28fb1745
+elb-deregister-instances-from-lb api-internal --instances i-038c9169,i-1f5f4375
+
+# old SSL
+i-65574b0f
+# redirect IP to
+i-6af71b07
+
+elb-register-instances-with-lb autocomplete-external --instances i-66f71b0b,i-62f71b0f
+elb-deregister-instances-from-lb autocomplete-external --instances i-f0ef0a9d,i-4afd1827
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 21:45:59 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2673282</id>
+        <text># reconfigure and restart replication due to minor misconfiguration in chef
+
+export pw=...
+mysql -u root -p$pw &lt; /etc/mysql/grants.sql
+echo &quot;stop slave; change master to master_host='';&quot; | mysql -u root -p$pw
+chef-client
+
+screen
+/etc/mysql/setup_replication.sh</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/08 22:40:49 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2674711</id>
+        <text>Verify:
+
+
+ec2-184-73-34-188.compute-1.amazonaws.com
+http://ec2-184-73-34-188.compute-1.amazonaws.com/autocomplete?term=De&amp;version=v1.6&amp;query=34.145.115.54&amp;
+http://ec2-184-73-34-188.compute-1.amazonaws.com/api/v2/ip.xml?query=34.145.115.54&amp;key=demo&amp;
+
+ec2-184-73-110-10.compute-1.amazonaws.com
+http://ec2-184-73-110-10.compute-1.amazonaws.com/autocomplete?term=De&amp;version=v1.6&amp;query=34.145.115.54&amp;
+http://ec2-184-73-110-10.compute-1.amazonaws.com/api/v2/ip.xml?query=34.145.115.54&amp;key=demo&amp;
+
+ec2-174-129-93-94.compute-1.amazonaws.com
+http://ec2-174-129-93-94.compute-1.amazonaws.com/autocomplete?term=De&amp;version=v1.6&amp;query=34.145.115.54&amp;
+http://ec2-174-129-93-94.compute-1.amazonaws.com/api/v2/ip.xml?query=34.145.115.54&amp;key=demo&amp;
+
+i-66f71b0b
+ec2-67-202-32-30.compute-1.amazonaws.com
+domU-12-31-39-0B-DC-F2.compute-1.internal
+http://ec2-67-202-32-30.compute-1.amazonaws.com/autocomplete?term=De&amp;version=v1.6&amp;query=34.145.115.54&amp;
+http://ec2-67-202-32-30.compute-1.amazonaws.com/api/v2/ip.xml?query=34.145.115.54&amp;key=demo&amp;
+
+ec2-184-72-79-82.compute-1.amazonaws.com
+http://ec2-184-72-79-82.compute-1.amazonaws.com/autocomplete?term=De&amp;version=v1.6&amp;query=34.145.115.54&amp;
+http://ec2-184-72-79-82.compute-1.amazonaws.com/api/v2/ip.xml?query=34.145.115.54&amp;key=demo&amp;
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/09 18:11:15 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2674715</id>
+        <text>Where's your inbox zero now?</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/09 18:13:54 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5538118</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538118</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>knife ec2 server create &quot;role[demandbase_master]&quot; --region us-east-1 -Z us-east-1b -f m1.large -i ami-ac07f2c5 -G default -x ubuntu -S demandbase-keypair
+
+i-6e799b03
+ec2-174-129-55-109.compute-1.amazonaws.com
+domU-12-31-39-09-30-12.compute-1.internal
+
+# @newmaster stop cron
+/etc/init.d/cron stop
+
+# @newmaster stop rabbitmq
+/etc/init.d/rabbitmq-server stop
+</description>
+    <name>Create new production master instance (m1.large) with new EBS volume with no services running</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 15:36:36 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 12:28:57 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/10 15:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538605</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538605</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Point SSL IP at new slave</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 16:02:43 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:45:59 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:45:59 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2681028</id>
+        <text>ELB: 184.73.252.201  used to point to AMI i-65574b0f.  Updating to point to i-6af71b07</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/11 11:06:37 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5538620</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538620</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Point ELBs at new slaves</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 16:03:34 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:49:01 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:49:01 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2681138</id>
+        <text>api-internal currently points to i-038c9169 and i-1f5f4375. Switching to i-f2fd119f and i-28fb1745
+
+autocomplete-external currently points to i-f0ef0a9d and i-4afd1827, switching to i-66f71b0b and i-62f71b0f</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/11 11:13:52 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5538628</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538628</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Remove all old master/slaves/EBS</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 16:04:02 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:49:03 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:49:03 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2681453</id>
+        <text>old api-internals:   i-038c9169 and i-1f5f4375
+old autocomplete-externals: i-f0ef0a9d and i-4afd1827</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/11 11:40:15 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5542946</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5542946</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Make sure the indexer runs at midnight PST</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 20:24:21 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:49:07 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:49:07 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538780</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538780</url>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Everything is automated hooah!</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 16:09:14 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:49:18 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:49:18 EDT</accepted_at>
+    <deadline type="datetime">2010/10/13 15:00:00 EDT</deadline>
+  </story>
+  <story>
+    <id type="integer">5538356</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538356</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description>(after deploy new master)</description>
+    <name>Remove old ec2 deploy repository from github</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 15:50:38 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 11:52:13 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 11:52:13 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5590719</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5590719</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>AMQP host has to be changed to master private IP, should abstract to a single location?
+
+Also, needs to install:
+gem install tmm1-amqp -s http://gems.github.com/
+</description>
+    <name>master chef recipe missing some steps</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/09 18:13:17 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 12:20:31 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 12:20:31 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2680917</id>
+        <text>Added:
+
+gem_package &quot;tmm1-amqp&quot; do
+  options &quot;-s http://gems.github.com/&quot;
+end
+
+to master.rb
+
+
+AMQP should stay separate as it may be a separate box in the future, and it's all in the roles file.
+</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/11 10:56:47 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5611569</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5611569</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>This Just Works. Leaving as one point due to the time required to set everything up and verify.</description>
+    <name>Get tests working on demandbase-api when sphinx/resque/etc is unavailable</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/11 14:28:55 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 15:21:04 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 15:21:04 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5612982</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5612982</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Add demandbase_api_admin and demandbase_api to continuous integration server</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/11 15:24:19 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 16:53:17 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/11 16:53:17 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5615127</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5615127</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Get demandbase_api tests all passing</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/11 17:08:51 EDT</created_at>
+    <updated_at type="datetime">2010/10/12 18:00:43 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/12 18:00:43 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5636659</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5636659</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>http://autocomplete.demandbase.com/autocomplete/docs/
+</description>
+    <name>Add docs for People API</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/12 13:17:30 EDT</created_at>
+    <updated_at type="datetime">2010/10/13 10:37:06 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/13 10:37:06 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2702948</id>
+        <text>URL for acceptance?</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/13 10:24:46 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2703048</id>
+        <text>Thanks, I'd posted it on Basecamp but not here.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/13 10:32:29 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2703104</id>
+        <text>Work, but has to add the trailing / because pivotal strips it for some reason. accepting!</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/13 10:37:01 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5558430</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5558430</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>When Martin put in his email address, the domain in the search for v1.6 affected the results oddly so that 7-11 and others showed up and ignored the search terms
+
+Search data:
+mlongo@demandbase.com
+cisco
+69.38.209.30
+
+
+[Thu Oct  7 19:05:25.430 2010] 0.605 sec [ext/2/rel 721024 (0,10)] [company_picker_core] (@(company,marketing_alias) ^Demand*) | (@lead_company ^3415304$) | (@domain_string demandbase.com) | ((@state ^CA$))
+
+should group the term with the state
+</description>
+    <name>Domain in AutoComplete is influencing the results abnormally</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/07 15:08:23 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:54 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5540307</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540307</url>
+    <estimate type="integer">3</estimate>
+    <current_state>accepted</current_state>
+    <description>search by state, HQ
+
+deploy as v1.6
+
+when no state available, skip this completely
+
+test with
+206.205.177.43
+</description>
+    <name>Search by state instead of filtering by state</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:29:54 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:10:04 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5540321</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540321</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Look up Company Pick based on HQ for People API</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:30:38 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:10:10 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5636661</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5636661</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Add entitlement for Jigsaw ID</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/12 13:17:41 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:11:32 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5538338</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538338</url>
+    <estimate type="integer">3</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Add search version to returned objects so late old results do not overrite current new results</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 15:49:07 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:11:38 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5556255</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5556255</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>http://autocomplete.demandbase.com/autocomplete/docs/faq.html</description>
+    <name>Document customizing AutoComplete result labels</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/07 13:38:56 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:11:45 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5542448</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5542448</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>Either use the nano JS template syntax or a callback to allow for truncation etc.</description>
+    <name>Customize the AutoComplete results display</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 19:49:48 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:11:50 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/15 12:00:00 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5750044</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750044</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Get Google API key and Yahoo API key for api-admin.demandbase.com for GeoLocation</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 18:05:37 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 02:27:35 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 02:27:35 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2763992</id>
+        <text>The Google API v3 does not require a key anymore as can be seen from:
+http://maps.google.com/maps/geo?q=Atlanta&amp;output=xml&amp;key=&amp;oe=utf-8
+
+The Geokit RubyGem should be able to work without modification.
+
+The Yahoo PlaceFinder API doesn't either but GeoKit doesn't support this newer API.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/20 02:27:24 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5749694</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749694</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description>Salesforce-specific request
+
+see demandbase_api/application.rb#L13-16</description>
+    <name>Set the Access-Control-Allow-Origin for Salesforce on People and Domain APIs</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 17:41:46 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:18 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:18 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2763697</id>
+        <text>The way we set this up for before should actually work for all APIs.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/20 01:07:36 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5749572</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749572</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>Searches for the Autocomplete Company record based on the domain provided</description>
+    <name>Add separate Domain API</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 17:33:59 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:20 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:20 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5749630</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749630</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>This is a Salesforce specific request</description>
+    <name>Add support for querying People API based on Email MD5 hashes</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 17:37:09 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:21 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:21 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5749508</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749508</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>Sporadically will fire the onready callback before Autocomplete JS is loaded
+
+This is specific to the Sample page, should not be a problem with the actual Widget JS
+
+possibly fire demandbase:onready event at the end of widget loading
+</description>
+    <name>Investigate Autocomplete JS Loading issue</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 17:29:50 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:22 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:22 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2763906</id>
+        <text>Use jQuery.getScript to let it handle including the script and then loading the callback so load order is observed</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/20 02:08:36 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5777250</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5777250</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Batch Upload fails for Telmar CSV</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/20 01:01:02 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:22 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:22 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2763674</id>
+        <text>The CSV file has a ton of empty headers and values which produces some strange data that ActiveRecord doesn't like.
+
+I made sure we rejected this bad data.
+
+I'm also adding the forbes/fortune bools.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/20 01:02:49 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5777259</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5777259</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Add Forbes/Fortune bools before next data load</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/20 01:03:05 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:23 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:23 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5540871</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540871</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>The same field should be used and a simple regexp to match what kind of input</description>
+    <name>Organization search by IP, SID, or Company Name</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:53:00 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:24 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:24 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5541053</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541053</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Index demandbase_organizations.company_name and accounts.username for faster searches</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 18:04:42 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:25 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:25 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5541180</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541180</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>When someone logs in, look up the current DemandbaseOrganization and CompanyPicker records for their IP.
+
+If it doesn't exist, prompt them to create it with the IP already populated.
+
+If it does, show them the current information and ask them if it's correct, providing a link to edit it if it isn't.</description>
+    <name>Look up current user's IP for record and prompt for actions (update, create)</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 18:13:01 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 14:09:27 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/20 14:09:27 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5611803</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5611803</url>
+    <estimate type="integer">5</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Improve test coverage of demandbase_api_admin</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/11 14:41:59 EDT</created_at>
+    <updated_at type="datetime">2010/10/21 16:37:51 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/21 16:37:51 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2717599</id>
+        <text>Models in demandbase_api_admin are now 100% covered. working on Controllers now, several of which are up to 100% line coverage.</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/14 13:34:52 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2717619</id>
+        <text>This is awesome.  Great work.</text>
+        <author>Charles Brian Quinn</author>
+        <noted_at type="datetime">2010/10/14 13:36:29 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2744575</id>
+        <text>Helpers up to 100% with the exception of one that I don't think is used. Following up with Matt on that.    More progress on controllers</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/18 11:00:24 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2784359</id>
+        <text>Coverage 100% on all controllers except one snipped that Matt is going to look at involving CSV imports.</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/21 16:38:04 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5818029</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5818029</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description>Can reproduce issue here:
+
+http://autocomplete.demandbase.com/autocomplete?version=v1.6&amp;term=Demand&amp;state=TX
+
+Specifically, &quot;Demand&quot; should show more than just the 3 Demand companies in Texas, including potentially Demandbase.
+</description>
+    <name>Autocomplete v1.6 results seem to filter on state instead of just boosting</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/21 15:23:00 EDT</created_at>
+    <updated_at type="datetime">2010/10/22 16:25:38 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/22 16:25:38 EDT</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2784181</id>
+        <text>The issue was that when State was available it was doing an AND without allowing just the term to also pull up results without a state.
+
+Effectively, we now do:
+(term and state) or term
+</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/21 16:22:17 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5541529</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541529</url>
+    <estimate type="integer">2</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Keys can enable and disable usage tracking</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 18:33:49 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:17:33 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/25 18:17:33 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5749594</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749594</url>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Separated People/Domain APIs</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 17:34:52 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:29:11 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/25 18:29:11 EDT</accepted_at>
+    <deadline type="datetime">2010/10/25 12:00:00 EDT</deadline>
+  </story>
+  <story>
+    <id type="integer">5875506</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5875506</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Document People API support for email hash</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/25 18:34:59 EDT</created_at>
+    <updated_at type="datetime">2010/10/26 14:48:34 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/26 14:48:34 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5875500</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5875500</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Document the Domain API</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/25 18:34:46 EDT</created_at>
+    <updated_at type="datetime">2010/10/26 14:48:35 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/26 14:48:35 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5750094</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750094</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description>Martin provided in email. Attached for reference.</description>
+    <name>Get SIC to Industry/SubIndustry Mappings from Demandbase</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Martin Longo</owned_by>
+    <created_at type="datetime">2010/10/18 18:09:36 EDT</created_at>
+    <updated_at type="datetime">2010/10/27 17:20:13 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/27 12:00:00 EDT</accepted_at>
+    <attachments type="array">
+      <attachment>
+        <id type="integer">678351</id>
+        <filename>sic_mapping.csv</filename>
+        <description></description>
+        <uploaded_by>Matt Todd</uploaded_by>
+        <uploaded_at type="datetime">2010/10/27 17:20:24 EDT</uploaded_at>
+        <url>http://www.pivotaltracker.com/resource/download/678351</url>
+      </attachment>
+    </attachments>
+  </story>
+  <story>
+    <id type="integer">5875975</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5875975</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>http://autocomplete.demandbase.com/api/v1/domain.json?query=apple.com&amp;key=demo
+vs
+http://autocomplete.demandbase.com/api/v1/domain.json?query=de24b5571deaea7cf4b2a5c00ef66fb7&amp;key=demo
+</description>
+    <name>Domain API supports lookup by domain hash</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/25 19:09:46 EDT</created_at>
+    <updated_at type="datetime">2010/10/28 18:23:14 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/28 18:23:14 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5892613</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5892613</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Reindex Autocomplete data for domain hash lookup</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/26 14:27:40 EDT</created_at>
+    <updated_at type="datetime">2010/10/28 18:23:16 EDT</updated_at>
+    <accepted_at type="datetime">2010/10/28 18:23:16 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5938130</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5938130</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Add forbes/fortune entitlements</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/28 18:30:20 EDT</created_at>
+    <updated_at type="datetime">2010/11/01 18:32:26 EDT</updated_at>
+    <accepted_at type="datetime">2010/11/01 18:32:26 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5938133</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5938133</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Remove forbes/fortune sub columns</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/28 18:30:35 EDT</created_at>
+    <updated_at type="datetime">2010/11/01 18:32:29 EDT</updated_at>
+    <accepted_at type="datetime">2010/11/01 18:32:29 EDT</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5540605</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540605</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Accounts have a technical contact</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:41:57 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 13:46:43 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 13:46:43 EST</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5821692</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5821692</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description>Waiting to hear back from David Steinore RE: whether HQ is sufficient for Single Locations</description>
+    <name>Domain API search based on HQ Type should include HQs and Single Location</name>
+    <requested_by>Martin Longo</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/21 18:26:13 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 13:46:44 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 13:46:44 EST</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2850653</id>
+        <text>Confirmed that the query should filter on &quot;HQ&quot; and &quot;SI&quot;.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/29 01:12:56 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5892606</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5892606</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Rename Person/People API to Email API</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/26 14:27:10 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 13:46:47 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 13:46:47 EST</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5749993</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749993</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>for ML and JC
+shows how to search for organization and shows both the Account(s) and IPs by Org
+</description>
+    <name>Write quick demo for search results in Admin</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/18 18:02:46 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 13:52:54 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 13:52:54 EST</accepted_at>
+  </story>
+  <story>
+    <id type="integer">5892623</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5892623</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>demo page show localization
+&quot;shows not-US or US&quot;
+
+The Demo is:
+http://api.demandbase.com/english_only_api.html
+</description>
+    <name>Document localization-dependent API calls et al with demo page</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/26 14:28:08 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 14:51:16 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 14:51:16 EST</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2950831</id>
+        <text>needs clear indicator of whether API would be called or not.  Company name, by itself, is not reliable if it's an ISP.</text>
+        <author>Martin Longo</author>
+        <noted_at type="datetime">2010/11/08 13:48:48 EST</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5750078</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750078</url>
+    <estimate type="integer">0</estimate>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Demandbase to upload new Autocomplete Data</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Martin Longo</owned_by>
+    <created_at type="datetime">2010/10/18 18:08:24 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 18:38:18 EST</updated_at>
+    <accepted_at type="datetime">2010/11/08 18:38:18 EST</accepted_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2749814</id>
+        <text>David Steinore has the credentials for uploading to the FTP site</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/18 18:08:54 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2951951</id>
+        <text>I believe this was actually skipped in favor of just updating the IP Records with the Forbes/Fortune flags</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/11/08 14:31:25 EST</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5540588</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540588</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Users can login</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:40:31 EDT</created_at>
+    <updated_at type="datetime">2010/10/27 17:18:14 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5540585</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540585</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Accounts have many users</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:40:20 EDT</created_at>
+    <updated_at type="datetime">2010/10/29 00:40:07 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5540590</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540590</url>
+    <estimate type="integer">1</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Users can be given specific roles</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:40:42 EDT</created_at>
+    <updated_at type="datetime">2010/11/02 01:00:31 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5938125</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5938125</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Batch update to include forbes/fortune data from 2010-09-22 data sets</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/28 18:29:56 EDT</created_at>
+    <updated_at type="datetime">2010/11/01 19:48:16 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5540593</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5540593</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Admin Users can manage permissions of other users</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 17:40:51 EDT</created_at>
+    <updated_at type="datetime">2010/11/03 21:04:55 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541066</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541066</url>
+    <estimate type="integer">1</estimate>
+    <current_state>finished</current_state>
+    <description>Can be:
+* Active (Customer)
+* Evaluation
+* Inactive
+</description>
+    <name>Accounts have a meaningful status</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/10/06 18:06:04 EDT</created_at>
+    <updated_at type="datetime">2010/11/08 13:28:06 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6131337</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6131337</url>
+    <estimate type="integer">1</estimate>
+    <current_state>delivered</current_state>
+    <description></description>
+    <name>Document transition from Account auth to User auth for Dashboard app</name>
+    <requested_by>Larry Bernstein</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/08 13:03:17 EST</created_at>
+    <updated_at type="datetime">2010/11/08 17:13:06 EST</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2956187</id>
+        <text>See document at:
+https://docs.google.com/document/d/1U88omWfRS1jQ4GL9xPL429Q2--xrBOY83p4c0EmC628/edit?hl=en&amp;authkey=CI3fzr8D</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/11/08 17:12:38 EST</noted_at>
+      </note>
+      <note>
+        <id type="integer">2956217</id>
+        <text>Larry, please review the document above and post any questions here.</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/11/08 17:13:22 EST</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">6180799</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6180799</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Accounts do not need to own Users now</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/09 13:14:45 EST</created_at>
+    <updated_at type="datetime">2010/11/10 11:02:24 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6180819</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6180819</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Users will not be created for Costumers so the associated Role's Permissions and that level of Access should be removed</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/09 13:15:45 EST</created_at>
+    <updated_at type="datetime">2010/11/10 11:02:28 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6180695</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6180695</url>
+    <estimate type="integer">3</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Admin API uses a shared secret to authorize full access to API data</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/09 13:11:47 EST</created_at>
+    <updated_at type="datetime">2010/11/11 14:53:13 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6205563</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6205563</url>
+    <estimate type="integer">2</estimate>
+    <current_state>finished</current_state>
+    <description></description>
+    <name>Accounts should not be used to authenticate any more</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/10 01:14:55 EST</created_at>
+    <updated_at type="datetime">2010/11/10 12:03:55 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">5992276</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5992276</url>
+    <estimate type="integer">-1</estimate>
+    <current_state>unstarted</current_state>
+    <description>https://highgroove.basecamphq.com/projects/3131806/posts/38458044/comments
+
+Providing scenarios and user stories would be a good idea here.</description>
+    <name>define specific roles and their permissions</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Martin Longo</owned_by>
+    <created_at type="datetime">2010/11/02 00:53:47 EDT</created_at>
+    <updated_at type="datetime">2010/11/02 00:53:54 EDT</updated_at>
+    <labels>blocked</labels>
+    <notes type="array">
+      <note>
+        <id type="integer">2951897</id>
+        <text>Do we have anything on this?</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/11/08 14:29:32 EST</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5890691</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5890691</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description>Send Larry some documentation/research to read, so that he can help with deploys.
+Schedule next deploy as a screenshare with Larry.  Schedule :30 min next week with Larry to show the push to deploy process and infrastructure.</description>
+    <name>Send Larry Docs on Chef and schedule Deployment with him</name>
+    <requested_by>Charles Brian Quinn</requested_by>
+    <created_at type="datetime">2010/10/26 12:49:59 EDT</created_at>
+    <updated_at type="datetime">2010/10/26 12:50:04 EDT</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2837580</id>
+        <text>What specifically is he interested in?
+
+The development/deployment cycle? How chef handles continuous deployment?</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/27 17:23:28 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">6147275</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6147275</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description>Cost means:
+* amazon costs
+* hours for setting up
+
+* impacts to data load
+
+Create a document that lists out all this information
+</description>
+    <name>SPIKE: Add New Region (West Coast) Cost Calculation</name>
+    <requested_by>Charles Brian Quinn</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/11/08 18:34:13 EST</created_at>
+    <updated_at type="datetime">2010/11/08 18:35:10 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">5749758</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749758</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Martin Longo to send SalesToLead changes document</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Martin Longo</owned_by>
+    <created_at type="datetime">2010/10/18 17:45:43 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 17:45:59 EDT</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2749602</id>
+        <text>Ping!</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/18 17:46:09 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">6037484</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6037484</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Update Admin Flex App to use User singe_access_token instead of the first Key for Admin API access</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/04 02:38:01 EDT</created_at>
+    <updated_at type="datetime">2010/11/04 02:38:06 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">6037433</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6037433</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description>These fields are useful during the transition to user accounts but will be unneeded once all accounts have transitioned.</description>
+    <name>Remove Accounts admin and login columns</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/04 02:29:18 EDT</created_at>
+    <updated_at type="datetime">2010/11/04 02:34:24 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5892729</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5892729</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>Uses the same approach to customize each of these different columns
+
+Should include customized but similar admin UI</description>
+    <name>Refactor customizations for accounts to be able to customize ranges of revenue (annual_sales), sic codes, and employee counts</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/26 14:33:49 EDT</created_at>
+    <updated_at type="datetime">2010/10/28 18:29:08 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">6147309</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6147309</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Data Load Nov 17-19</name>
+    <requested_by>Charles Brian Quinn</requested_by>
+    <created_at type="datetime">2010/11/08 18:35:58 EST</created_at>
+    <updated_at type="datetime">2010/11/08 18:36:09 EST</updated_at>
+    <deadline type="datetime">2010/11/17 12:00:00 EST</deadline>
+  </story>
+  <story>
+    <id type="integer">5892629</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5892629</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Add annual_sales entitlement</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/26 14:28:24 EDT</created_at>
+    <updated_at type="datetime">2010/10/28 18:29:13 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541351</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541351</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>Simple AJAX call to get the values for the matching SID and then update the fields (that are empty?)</description>
+    <name>Update IP Address fields if SID gets updated</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:24:50 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 19:10:46 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541249</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541249</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>Could be a push-button AJAX request to update the fields, or an before_save callback</description>
+    <name>Lookup Lat/Lng for Address on IP Address street address</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:18:03 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 19:11:29 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541277</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541277</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Show Registry &amp; Office location maps for IP Address</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:19:13 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 19:11:37 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5751256</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5751256</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description>Should use industry and sub_industry IDs if they exist before failing back to the defaults until they've been fully migrated. This allows us to make these changes without causing any downtime or using maintenance windows.</description>
+    <name>API should map industry based on SIC code mappings instead of industry and sub_industry IDs</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 19:20:41 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:41:46 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5751338</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5751338</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Migrate existing Industry/Sub-Industry Mappings to SIC Mappings</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 19:26:12 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:41:58 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750251</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750251</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Migrate Account Industry Mappings to SIC Mappings</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:18:21 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:43:09 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750109</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750109</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description>Schemaless column
+
+Increases memory requirements for mappings and has performance implications unless we cache the accounts to prevent constant deserialization</description>
+    <name>Add SIC Mappings to Accounts</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:11:02 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:42:38 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750261</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750261</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Remove Industry Mappings and Admin UI elements</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:18:48 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:43:27 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541550</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541550</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Link to pre-populate email to Account contact with API key</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:35:53 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 19:11:58 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5539237</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5539237</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Add &quot;Is this correct?&quot; when you log in using API call</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:37:24 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:37:28 EDT</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2881353</id>
+        <text>I think this is a duplicate story. See: https://www.pivotaltracker.com/story/show/5541180</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/11/02 01:01:51 EDT</noted_at>
+      </note>
+      <note>
+        <id type="integer">2883860</id>
+        <text>Yup, Duplicate!</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/11/02 08:27:03 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5538329</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538329</url>
+    <estimate type="integer">8</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>SPIKE: Selenium tests for autocomplete</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:48:21 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:32:04 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538313</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538313</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unstarted</current_state>
+    <description>scout does a bad job of this: http://github.com/highgroove/scout-plugins/raw/master/url_monitor/url_monitor.rb</description>
+    <name>SPIKE: monitoring API functionality and completeness remotely</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:47:21 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:32:13 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5539168</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5539168</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Autocomplete updates complete</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:32:34 EDT</created_at>
+    <updated_at type="datetime">2010/10/11 14:50:07 EDT</updated_at>
+    <deadline type="datetime">2010/11/13 12:00:00 EST</deadline>
+  </story>
+  <story>
+    <id type="integer">5538957</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538957</url>
+    <estimate type="integer">3</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Get em-proxy working to copy live traffic to staging system</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:23:35 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:23:49 EDT</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2682387</id>
+        <text>em-proxy cannot be done passively, it requires em-proxy to be running, accept connections, and forward on to app servers.  This means running it at a different place or on a different port.  It could run either on load balancers or app servers</text>
+        <author>Chris Kelly</author>
+        <noted_at type="datetime">2010/10/11 13:02:32 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+  <story>
+    <id type="integer">5749944</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5749944</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Indicate when Accounts have Watch Lists attached</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 17:59:21 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:42:46 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5683408</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5683408</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Scan data sets for corrupt data</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/14 10:07:32 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:07:28 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538942</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538942</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Upgrade Redis staging server</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:22:43 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:23:57 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538182</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538182</url>
+    <estimate type="integer">8</estimate>
+    <current_state>unstarted</current_state>
+    <description>This uses bundler.  Update Chef repo to no longer do Gem installation when bundler can.</description>
+    <name>Rewrite API using Rails 3 and new redis (branch, staging)</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:40:14 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:24:11 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538975</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538975</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Upgrade Redis production server</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:24:34 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:24:39 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538222</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538222</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Deploy production API using new combined Rails 3 version</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:40:57 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:16:38 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5824564</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5824564</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Track usage statistics of the Domain API</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/22 00:52:14 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:41:03 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541191</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541191</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Track usage statistics of the AutoComplete API</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:13:35 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:39:27 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541188</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541188</url>
+    <estimate type="integer">3</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Track usage statistics of the People API</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:13:29 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:41:10 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541204</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541204</url>
+    <estimate type="integer">3</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Integrate with PingDom for downtime information</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:14:41 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:40:03 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5541512</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5541512</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>cache figures in Redis since it can take some time to pull the figures</description>
+    <name>Key usage sparkline</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 18:32:53 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:40:28 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538215</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538215</url>
+    <estimate type="integer">8</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Merge admin into Rails 3 (branch, staging)</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:40:37 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:16:52 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538228</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538228</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Deploy production admin using new API+admin version</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:41:12 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:17:05 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538918</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538918</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>App is consolidated and in Rails 3</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:20:33 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:20:36 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538287</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538287</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>date,activity,location,temp,equip,time,distance,max_speed,avg_heart,max_heart,calories,max_elev,climb,wq,avg_cad,route,note
+
+# grouped by week, show number of requests
+
+select * into outfile '/tmp/summaries.csv' fields terminated by ',' optionally enclosed by '&quot;' lines terminated by '\n' from summariessed -i '' -e's/ \d\d:\d\d:\d\d//g' summaries.csv
+sed -i '' -e's/-//g' summaries.csv
+sed -i '' -e's/&quot;//g' summaries.csv
+
+
+A = load 'summaries.csv' using PigStorage(',') as (id:int, token_id:int, from:int, to:int, queries:int, match_count:int, foreign:int, us_isp:int, us_resolved_business:int, us_unresolved:int, created_at:int, updated_at:int, period:chararray, hot_list_matches: int);
+B = GROUP A BY from;
+C= FOREACH B GENERATE group, SUM(A.match_count), SUM(A.us_resolved_business);
+DUMP C;
+
+-----------------------------------------------------------------------------
+
+mysql#&gt; select * into outfile '/tmp/summaries.csv' fields terminated by ',' optionally enclosed by '&quot;' lines terminated by '\n' from summariessed -i '' -e's/ \d\d:\d\d:\d\d//g' summaries.csv
+
+$&gt; sed -i '' -e's/-//g' summaries.csv
+$&gt; sed -i '' -e's/&quot;//g' summaries.csv
+
+pig&gt;
+
+A = load 'summaries.csv' using PigStorage(',') as (id:int, token_id:int, from:int, to:int, queries:int, match_count:int, foreign:int, us_isp:int, us_resolved_business:int, us_unresolved:int, created_at:int, updated_at:int, period:chararray, hot_list_matches: int);
+B = GROUP A BY from;
+C= FOREACH B GENERATE group, SUM(A.match_count), SUM(A.us_resolved_business);
+DUMP C;
+</description>
+    <name>demo Scribe+pig for reporting</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Chris Kelly</owned_by>
+    <created_at type="datetime">2010/10/06 15:45:43 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:16:23 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538306</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538306</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unstarted</current_state>
+    <description>* scribe+pig? 
+* spread
+* flume
+
+This will replace scheduled jobs on admin
+* Some data needs to be ~realtime 
+* Some data is scheduled reports</description>
+    <name>SPIKE: system for aggregating log data for reporting</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:46:47 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:16:29 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5539080</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5539080</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>New reporting and aggregating system in place</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:27:16 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:27:18 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538252</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538252</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unstarted</current_state>
+    <description>How do we do this the right way with UltraDNS GSLB, ELBs, EIPs, HAproxy, etc to ensure availability and low latency, west coast, etc</description>
+    <name>SPIKE: Design fault tolerant infrastructure considering Amazon SLAs</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:43:01 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:16:30 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5538246</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5538246</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unstarted</current_state>
+    <description>Matt Todd: &quot;Demandbase Sonoa Integration Followup&quot;
+
+ELB/EC2 Setup
+
+http://awsdocs.s3.amazonaws.com/ElasticLoadBalancing/latest/elb-qrc.pdf 
+elb-create-lb api-slaves-staging --availability-zones us-east-1b --listener &quot;protocol=HTTP,lb-port=80,instance-port=80&quot; --listener &quot;protocol=TCP,lb-port=443,instance-port=443&quot;
+https://highgroove.basecamphq.com/projects/3131806/posts/34242241/comments
+
+
+Access Key ID: 1YHWRHEWC681Q79V3RR2
+Secret Key: AJCxAPm3DtebAkJDhOeDcRPP6ApWn5moxlfL0pDT
+certs : ~/Documents/ec2/keys/demandbase-*
+
+ELB                                          |   DNS
+-------------------------------------
+api-internal    -&gt; apps             |  api.demandbase.com      (http/https)   - api-internal-504169344.us-east-1.elb.amazonaws.com  (instances from api-slaves) - READY
+api-external   -&gt;sonoa             |  filter.api.demandbase.com  (http/https) - api-external-1622197513.us-east-1.elb.amazonaws.com  (instances from sonoa-sn-production) - READY
+picker-external    -&gt; apps        | picker.demandbase.com (http/https) - picker-external-1870574169.us-east-1.elb.amazonaws.com  (instances from picker-slaves) - READY
+api-stage-internal   -&gt; apps    |  stage.api.demandbase.com (http/https) - api-stage-internal-414170766.us-east-1.elb.amazonaws.com (instances from demandbase-api-slaves-staging) -&gt; READY
+api-stage-external   -&gt; sonoa   |  stage.filter.api.demandbase.com (http/https) - api-stage-external-1967497430.us-east-1.elb.amazonaws.com (instances from api-slaves-staging-sonoa) -&gt; READY
+
+
+non-elb:
+----------------------------
+api-admin.demandbase.com
+stage.api-admin.demandbase.com
+
+
+SONOA go live: 
+1.  change api.demandbase.com to CNAME to api-external
+2.  change stage.api.demandbase.com to CNAME to api-stage-external
+
+
+Rampradeep - per key policies (policies apply to many keys, but are enforced per key and not per policy)Rampradeep Krishnamurthy: &quot;RE: Demandbase Sonoa Integration Followup&quot;
+
+
+
+* docs for adding profiles
+* pull details for buckets (limits) from backend APIs
+* mlongo@demandbase.com (Martin)
+
+https://docs.google.com/a/highgroove.com/document/edit?id=1TA0qtYqowykqA-4I_MLAlaUGs5MShPv6ZGtu9le_edU&amp;hl=en&amp;authkey=CO-n5MgD#</description>
+    <name>SPIKE: Sonoa</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 15:42:40 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:16:32 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5539070</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5539070</url>
+    <estimate type="integer">8</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Implement new infrastructure</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:26:32 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 12:16:40 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5539074</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5539074</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Running on global fault tolerant infrastructure</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/06 16:26:45 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 16:26:46 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">6264511</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6264511</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>http://opscode.com/pricing</description>
+    <name>Email OpsCode RE: account for Demandbase</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/11 10:03:19 EST</created_at>
+    <updated_at type="datetime">2010/11/11 10:03:19 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">5825784</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5825784</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Provide Highgroove with the credentials to access Pingdom's site or just the API key if it exists / is trivial to look up.
+
+This is useful for producing uptime/downtime information for the dashboard.</description>
+    <name>Provide Pingdom credentials</name>
+    <requested_by>Matt Todd</requested_by>
+    <owned_by>Martin Longo</owned_by>
+    <created_at type="datetime">2010/10/22 03:30:32 EDT</created_at>
+    <updated_at type="datetime">2010/10/25 18:38:58 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5779336</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5779336</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Possibly change link to split if the record spans more than one IP</description>
+    <name>When correcting visitor's Demandbase organization record, handle records spanning more than one IP</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/20 04:38:17 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 04:38:17 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5770182</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5770182</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unscheduled</current_state>
+    <description>CK and I will talk about how to get the infrastructure to educate the admin app about its current capacity and utilization so that we can provide reports in the admin</description>
+    <name>Discuss reporting architecture utilization/capacity based on actual numbers</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/19 15:44:40 EDT</created_at>
+    <updated_at type="datetime">2010/10/19 15:44:48 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5751316</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5751316</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>New Accounts should use the &quot;evaluation&quot; Entitlement by default</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 19:24:46 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 19:24:46 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750993</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750993</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>This makes transitioning the live API over to the new Entitlements seamless so that the migration can occur smoothly and not cause any downtime and maintenance windows</description>
+    <name>API should use the Entitlement record if an Account has one assigned but fall back to the entitlements serialized list</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 19:01:45 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 19:01:45 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750957</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750957</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Create a new Entitlement record with the Account's name and set the enabled columns the same, then update the existing accounts to the new Entitlement record
+</description>
+    <name>Migrate existing Entitlements to new Entitlement records</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:59:18 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:59:18 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750923</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750923</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description>This moves Entitlements to its own model and gives them labels
+
+For example:
+web forms
+evaluation
+geolocal
+all
+</description>
+    <name>Admins can manage Entitlements as a labeled group of entitled columns that can be applied to Accounts</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:57:03 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:57:03 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750736</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750736</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Break this story up into:
+Add Redis to Slave Servers
+Cache Account lookup to API
+etc</description>
+    <name>Add caching for Account lookup on API using Redis</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:45:29 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:45:29 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750128</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750128</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Expects format produced by Export feature
+
+sic,name,customized_name
+</description>
+    <name>Add Import from CSV for SIC Mappings to Admin</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:12:44 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:17:55 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750124</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750124</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Always includes their existing mapping values as well as the Demandbase Label and SIC Code:
+
+sic,name,customized_name
+
+The client can download it and customize the last field and then upload using the Import from CSV feature</description>
+    <name>Add Export to CSV for SIC Mappings to Admin</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:12:20 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:12:27 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5573571</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5573571</url>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Next</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/08 09:47:28 EDT</created_at>
+    <updated_at type="datetime">2010/10/08 09:47:34 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5938503</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5938503</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Add job to scan through existing keys to ensure usage data was summarized</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/28 18:57:50 EDT</created_at>
+    <updated_at type="datetime">2010/10/30 21:13:25 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5824757</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5824757</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Upgrade staging environment recipes first then roll out to production</description>
+    <name>Upgrade to Passenger3</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/22 01:24:16 EDT</created_at>
+    <updated_at type="datetime">2010/10/22 01:24:54 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5792068</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5792068</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Update setup_replication step for master to dump once for all slaves being relaunched at the same time</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/20 15:19:19 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 15:19:24 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5796205</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5796205</url>
+    <estimate type="integer">5</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Improve test coverage of demandbase_api</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/20 17:57:55 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 17:58:00 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5796182</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5796182</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Add validations on demandbase_organization</name>
+    <requested_by>Chris Kelly</requested_by>
+    <created_at type="datetime">2010/10/20 17:57:09 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 17:58:01 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5792052</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5792052</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Rename DemandbaseOrganization and CompanyPicker and table names</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/20 15:18:32 EDT</created_at>
+    <updated_at type="datetime">2010/10/20 15:18:41 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5636665</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5636665</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Consolidate entitlements and import attributes</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/12 13:17:52 EDT</created_at>
+    <updated_at type="datetime">2010/10/12 16:45:32 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5650295</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5650295</url>
+    <estimate type="integer">3</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Use asset packager so that we can use individual files in development and for debugging but have a minified version of all of the files in one file.</description>
+    <name>Package AutoComplete widget.js for production from individual component files</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/12 19:58:28 EDT</created_at>
+    <updated_at type="datetime">2010/10/12 19:58:34 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5543016</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5543016</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Either return empty set or even disable further searches for that page load by setting a boolean</description>
+    <name>If Sphinx is unreachable, return an error result set that makes it look like no autocomplete functionality is enabled</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 20:32:26 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 20:32:34 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5542528</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5542528</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Requires a key to be passed along to the AutoComplete API</description>
+    <name>Apply Account mappings to the AutoComplete results for industry, sub_industry, and company_size</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 19:52:07 EDT</created_at>
+    <updated_at type="datetime">2010/10/06 19:52:07 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5561084</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5561084</url>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Someday</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/07 17:34:15 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 17:34:17 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750031</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750031</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Show analysis feedback on IP view</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:04:44 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:04:54 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5750019</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5750019</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Doesn't change IP start/end for each record, but &quot;synchronizes&quot; changes across organization records</description>
+    <name>Add method for updating all IP records that match SID/Organization</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/18 18:04:03 EDT</created_at>
+    <updated_at type="datetime">2010/10/18 18:04:52 EDT</updated_at>
+  </story>
+  <story>
+    <id type="integer">5542999</id>
+    <project_id type="integer">125701</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5542999</url>
+    <estimate type="integer">8</estimate>
+    <current_state>unscheduled</current_state>
+    <description>Look into
+* delta indexes
+* weekly full reindexes
+* conditional reindexes if data has in fact changed (not exactly super frequent, and usually if it does it's sweeping)
+</description>
+    <name>Reindex AutoComplete data set with no downtime</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/10/06 20:30:42 EDT</created_at>
+    <updated_at type="datetime">2010/10/07 17:34:30 EDT</updated_at>
+    <notes type="array">
+      <note>
+        <id type="integer">2661943</id>
+        <text>http://www.engineyard.com/blog/2009/5-tips-for-sphinx-indexing/</text>
+        <author>Matt Todd</author>
+        <noted_at type="datetime">2010/10/07 18:31:46 EDT</noted_at>
+      </note>
+    </notes>
+  </story>
+</stories>
