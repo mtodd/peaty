@@ -19,7 +19,7 @@ releases = []
 u.pt_projects.each do |project|
   project.stories.all
   project.releases.all
-  project.stories(:type => :releases)
+  project.stories(:type => :release)
   
   # add team members to team list
   team.concat project.users # but ensure uniqueness later
