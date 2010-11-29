@@ -57,4 +57,13 @@ class PeatyTest < Test::Unit::TestCase
     assert_equal :chore, @user.pivotal_tracker_projects.find(PROJECT_ID).chores.first.story_type
   end
   
+  # Tests for Iterations
+  def test_user_can_fetch_a_projects_iterations
+    project = @user.pivotal_tracker_projects.find(PROJECT_ID)
+    assert !project.iterations.all.empty?
+    assert iteration = project.iterations.first
+    assert !iteration.stories.empty?
+    assert_equal project.id, iteration.stories.first.project.id
+  end
+  
 end

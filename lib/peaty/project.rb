@@ -5,13 +5,16 @@ module Peaty
     def users(options = {})
       Array.wrap(self.memberships).map do |membership|
         membership = membership["membership"] if membership.key?("membership")
-        User.new(membership["person"])
+        User.with_connection(self.connection).new(membership["person"])
       end
-      
     end
     
     def stories(options = {})
       Proxy.new(Story, self.class.connection, options.merge(:project_id => self.id))
+    end
+    
+    def iterations(options = {})
+      Proxy.new(Iteration, self.class.connection, options.merge(:project_id => self.id))
     end
     
     def features(options = {})

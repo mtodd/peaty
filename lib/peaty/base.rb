@@ -13,6 +13,7 @@ module Peaty
     
     def initialize(attrs)
       raise ArgumentError unless attrs.is_a?(Hash)
+      @connection = self.class.connection
       # if we get a hash like {"item"=>{...}}, pull out the attributes
       @attributes = if attrs.key?(self.class.element);  attrs.delete(self.class.element) 
                     else                                attrs

@@ -18,6 +18,7 @@ require 'peaty/integration'
 require 'peaty/proxy'
 require 'peaty/base'
 require 'peaty/project'
+require 'peaty/iteration'
 require 'peaty/story'
 require 'peaty/user'
 

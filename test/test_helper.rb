@@ -20,6 +20,7 @@ uri = "http://www.pivotaltracker.com/services/v3"
 { "/projects"                                             => "projects",
   "/projects/#{PROJECT_ID}"                               => "project",
   "/projects/#{PROJECT_ID}/stories"                       => "stories",
+  "/projects/#{PROJECT_ID}/iterations"                    => "iterations",
   "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"           => "story",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Afeature" => "features",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Arelease" => "releases",
