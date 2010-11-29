@@ -26,8 +26,6 @@ end
 
 class Object
   def self.pivotal_tracker_for(attribute, options = {})
-    raise ArgumentError unless instance_methods.include?(attribute.to_s)
-    
     options = options.with_indifferent_access
     options.reverse_merge!( :attribute => attribute,
                             :method_prefix => :pivotal_tracker )
