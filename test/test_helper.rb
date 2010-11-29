@@ -19,5 +19,5 @@ TEST_TOKEN = "test"
 end
 
 class User < Struct.new(:pivotal_tracker_api_key)
-  active_tracker_for :pivotal_tracker_api_key
+  pivotal_tracker_for :pivotal_tracker_api_key
 end

@@ -25,7 +25,7 @@ module Peaty
 end
 
 class Object
-  def self.active_tracker_for(attribute, options = {})
+  def self.pivotal_tracker_for(attribute, options = {})
     raise ArgumentError unless instance_methods.include?(attribute.to_s)
     
     options = options.with_indifferent_access
