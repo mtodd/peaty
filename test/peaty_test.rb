@@ -6,16 +6,15 @@ class PeatyTest < Test::Unit::TestCase
     RestClient.log = Logger.new(File.join(File.dirname(__FILE__), 'test.log'))
     # All test's use TEST_TOKEN which is a valid API key""
     @user = User.new(TEST_TOKEN)
-    @project_id = 125701
   end
   
   # Tests for Projects
   def test_user_can_fetch_a_project
-    project = @user.pivotal_tracker_projects.find(@project_id)
+    project = @user.pivotal_tracker_projects.find(PROJECT_ID)
     
     assert !project.nil?
     assert project.is_a?(Peaty::Project)
-    assert_equal @project_id, project.id
+    assert_equal PROJECT_ID, project.id
   end
   
   def test_user_can_fetch_all_projects
@@ -25,34 +24,37 @@ class PeatyTest < Test::Unit::TestCase
   
   # Tests for Users
   def test_user_can_fetch_all_users_for_a_project
-    assert !@user.pivotal_tracker_projects.find(@project_id).users.all.empty?
-    assert @user.pivotal_tracker_projects.find(@project_id).users.contains(399324)
+    project = @user.pivotal_tracker_projects.find(PROJECT_ID)
+    assert !project.users.empty?
+    # users include the account that created the project
+    assert user = project.users.detect{ |u| u.name == project.account }
+    assert_equal project.account, user.name
   end
   
   # Tests for Stories
   def test_user_can_fetch_all_stories_for_a_project
-    assert !@user.pivotal_tracker_projects.find(@project_id).stories.all.empty?
-    assert_equal @project_id, @user.pivotal_tracker_projects.find(@project_id).stories.first.project.id
+    assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories.all.empty?
+    assert_equal PROJECT_ID, @user.pivotal_tracker_projects.find(PROJECT_ID).stories.first.project.id
   end
   
   def test_user_can_fetch_all_releases_for_a_project
-    assert !@user.pivotal_tracker_projects.find(@project_id).releases.all.empty?
-    assert_equal @project_id, @user.pivotal_tracker_projects.find(@project_id).releases.first.project.id
+    assert !@user.pivotal_tracker_projects.find(PROJECT_ID).releases.all.empty?
+    assert_equal PROJECT_ID, @user.pivotal_tracker_projects.find(PROJECT_ID).releases.first.project.id
   end
   
   def test_user_can_fetch_all_releases_for_a_project_via_stories
-    assert !@user.pivotal_tracker_projects.find(@project_id).stories(:type => :release).all.empty?
-    assert_equal :release, @user.pivotal_tracker_projects.find(@project_id).releases.first.type
+    assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories(:type => :release).all.empty?
+    assert_equal :release, @user.pivotal_tracker_projects.find(PROJECT_ID).releases.first.story_type
   end
   
   def test_user_can_fetch_all_bugs_for_a_project_via_stories
-    assert !@user.pivotal_tracker_projects.find(@project_id).stories(:type => :bug).all.empty?
-    assert_equal :bug, @user.pivotal_tracker_projects.find(@project_id).releases.first.type
+    assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories(:type => :bug).all.empty?
+    assert_equal :bug, @user.pivotal_tracker_projects.find(PROJECT_ID).bugs.first.story_type
   end
   
   def test_user_can_fetch_all_chores_for_a_project_via_stories
-    assert !@user.pivotal_tracker_projects.find(@project_id).stories(:type => :chore).all.empty?
-    assert_equal :chore, @user.pivotal_tracker_projects.find(@project_id).releases.first.type
+    assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories(:type => :chore).all.empty?
+    assert_equal :chore, @user.pivotal_tracker_projects.find(PROJECT_ID).chores.first.story_type
   end
   
 end

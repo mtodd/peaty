@@ -3,9 +3,20 @@ module Peaty
   class Base
     attr_accessor :attributes, :connection
     
-    def initialize(attributes)
-      raise ArgumentError unless attributes.is_a?(Hash)
-      @attributes = attributes
+    FILTERS = [
+      :id, :type, :state, :label, :has_attachment,
+      :created_since, :modified_since,
+      :requester, :owner,
+      :mywork,
+      :integration, :external_id, :has_external_id
+    ]
+    
+    def initialize(attrs)
+      raise ArgumentError unless attrs.is_a?(Hash)
+      # if we get a hash like {"item"=>{...}}, pull out the attributes
+      @attributes = if attrs.key?(self.class.element);  attrs.delete(self.class.element) 
+                    else                                attrs
+                    end
     end
     
     def method_missing(method, *args)
@@ -13,7 +24,7 @@ module Peaty
       super
     end
     def respond_to?(method)
-      self.attributes.key?(method.to_s)
+      super or self.attributes.key?(method.to_s)
     end
     
     def id
@@ -46,20 +57,42 @@ module Peaty
       end
       
       def find_by_id(id, options = {})
-        # puts JSON.parse(XmlToJson.transform(self.connection[self.member_path(id, options)].get.body)).inspect
-        
-        self.parse(self.connection[self.member_path(id, options)].get.body, self.element).
+        self.parse(self.connection[self.member_path(id, options)].get(:params => self.filter_options(options)).body, self.element).
           first.
           tap{ |e| e.connection = self.connection }
       end
       
       def all(options = {})
-        self.parse(self.connection[self.collection_path(options)].get.body, self.element.pluralize).
+        self.parse(self.connection[self.collection_path(options)].get(:params => self.filter_options(options)).body, self.element.pluralize).
           each { |e| e.connection = self.connection }
       end
       
       def first(options = {})
         self.all(options).first
+      end
+      
+      def filter_options(options = {}, filter = [])
+        options = options.dup # make sure we're working on a copy
+        # and delete any keys not supported for queries
+        options.each { |(k,_)| options.delete(k) unless FILTERS.include?(k.to_sym) }
+        
+        FILTERS.each do |term|
+          value = Array.wrap(options.delete(term))
+          filter << "%s:%s" % [ term,
+                                value.map do |v|
+                                  v = %("%s") % v if v.to_s =~ /\s/
+                                  v
+                                end.join(',') ] unless value.empty?
+        end
+        
+        # handle the rest of the filter strings
+        Array.wrap(options.delete(:rest)).each do |value|
+          value = %("%s") % value if value.to_s =~ /\s/
+          filter << value
+        end
+        
+        return options if filter.empty?
+        options.merge(:filter => filter.join(" "))
       end
     end
   end

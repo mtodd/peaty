@@ -2,6 +2,11 @@ module Peaty
   
   class Story < Base
     
+    def story_type
+      self.attributes["story_type"].to_sym
+    end
+    alias type story_type
+    
     def project
       Project.with_connection(self.class.connection).find(self.project_id)
     end
@@ -15,6 +20,12 @@ module Peaty
       end
       def member_path(id, options = {})
         "/projects/%i/stories/%i" % [options[:project_id].to_i, id]
+      end
+      
+      ### Filters
+      
+      def releases(options = {})
+        self.filter(:type => :release)
       end
     end
     

@@ -13,11 +13,13 @@ require 'nokogiri'
 require 'xml_to_json'
 require 'yajl/json_gem'
 
+$:.unshift Pathname.new(__FILE__).dirname
 require 'peaty/integration'
 require 'peaty/proxy'
 require 'peaty/base'
 require 'peaty/project'
 require 'peaty/story'
+require 'peaty/user'
 
 module Peaty
   

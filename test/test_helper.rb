@@ -17,15 +17,15 @@ STORY_ID    = 6821071
 RELEASE_ID  = 6821121
 
 uri = "http://www.pivotaltracker.com/services/v3"
-{ "/projects"                                           => "projects",
-  "/projects/#{PROJECT_ID}"                             => "project",
-  "/projects/#{PROJECT_ID}/stories"                     => "stories",
-  "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"         => "story",
-  "/projects/#{PROJECT_ID}/stories?filter=type:feature" => "features",
-  "/projects/#{PROJECT_ID}/stories?filter=type:release" => "releases",
-  "/projects/#{PROJECT_ID}/stories/#{RELEASE_ID}"       => "release",
-  "/projects/#{PROJECT_ID}/stories?filter=type:chore"   => "chores",
-  "/projects/#{PROJECT_ID}/stories?filter=type:bug"     => "bugs",
+{ "/projects"                                             => "projects",
+  "/projects/#{PROJECT_ID}"                               => "project",
+  "/projects/#{PROJECT_ID}/stories"                       => "stories",
+  "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"           => "story",
+  "/projects/#{PROJECT_ID}/stories?filter=type%3Afeature" => "features",
+  "/projects/#{PROJECT_ID}/stories?filter=type%3Arelease" => "releases",
+  "/projects/#{PROJECT_ID}/stories/#{RELEASE_ID}"         => "release",
+  "/projects/#{PROJECT_ID}/stories?filter=type%3Achore"   => "chores",
+  "/projects/#{PROJECT_ID}/stories?filter=type%3Abug"     => "bugs",
 }.each do |(path, fixture)|
   FakeWeb.register_uri(:get, uri + path, :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "%s.xml" % fixture)))
 end
