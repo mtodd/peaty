@@ -27,6 +27,15 @@
       </person>
       <role>Owner</role>
     </membership>
+    <membership>
+      <id>483165</id>
+      <person>
+        <email>chris@highgroove.com</email>
+        <name>Chris Kelly</name>
+        <initials>CK</initials>
+      </person>
+      <role>Member</role>
+    </membership>
   </memberships>
   <integrations>
   </integrations>
