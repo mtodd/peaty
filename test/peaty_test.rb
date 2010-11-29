@@ -42,6 +42,13 @@ class PeatyTest < Test::Unit::TestCase
     assert_equal PROJECT_ID, @user.pivotal_tracker_projects.find(PROJECT_ID).releases.first.project.id
   end
   
+  def test_user_can_fetch_all_releases_for_a_project_including_done
+    projects = @user.pivotal_tracker_projects.find(PROJECT_ID).releases.all(:includedone => true)
+    assert !projects.empty?
+    assert_equal PROJECT_ID, projects.first.project.id
+    assert_equal "accepted", projects.first.current_state
+  end
+  
   def test_user_can_fetch_all_releases_for_a_project_via_stories
     assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories(:type => :release).all.empty?
     assert_equal :release, @user.pivotal_tracker_projects.find(PROJECT_ID).releases.first.story_type
