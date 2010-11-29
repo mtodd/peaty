@@ -6,7 +6,7 @@ gem 'nokogiri'
 gem 'nokogiri-happymapper'
 
 gem 'rest-client'
-gem 'xml_to_json'
+gem 'xml_to_json', '0.0.1'
 gem 'yajl-ruby'
 
 group :development do
