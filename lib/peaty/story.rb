@@ -7,6 +7,11 @@ module Peaty
     end
     alias type story_type
     
+    # chores, bugs, releases may or may not have estimates
+    def estimate
+      self.attributes["estimate"].to_i
+    end
+    
     def project
       Project.with_connection(self.class.connection).find(self.project_id)
     end
