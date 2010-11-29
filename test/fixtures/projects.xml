@@ -135,11 +135,11 @@
     <point_scale>0,1,2,3,5,8</point_scale>
     <account>Charles Brian Quinn</account>
     <velocity_scheme>Average of 4 iterations</velocity_scheme>
-    <current_velocity>30</current_velocity>
+    <current_velocity>18</current_velocity>
     <initial_velocity>10</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
     <labels>iphone api,whitelabel</labels>
-    <last_activity_at type="datetime">2010/11/10 16:23:24 EST</last_activity_at>
+    <last_activity_at type="datetime">2010/11/16 13:12:45 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -381,6 +381,15 @@
         </person>
         <role>Member</role>
       </membership>
+      <membership>
+        <id>470879</id>
+        <person>
+          <email>kcallahan@liveworld.com</email>
+          <name>Kevin Callahan</name>
+          <initials>KC</initials>
+        </person>
+        <role>Owner</role>
+      </membership>
     </memberships>
     <integrations>
     </integrations>
@@ -393,11 +402,11 @@
     <point_scale>0,1,2,3,5,8</point_scale>
     <account>Chris Kelly</account>
     <velocity_scheme>Average of 3 iterations</velocity_scheme>
-    <current_velocity>17</current_velocity>
+    <current_velocity>32</current_velocity>
     <initial_velocity>32</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
     <labels>design</labels>
-    <last_activity_at type="datetime">2010/11/05 10:34:18 EDT</last_activity_at>
+    <last_activity_at type="datetime">2010/11/17 11:14:04 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -452,7 +461,7 @@
     <point_scale>0,1,2,3</point_scale>
     <account>Charles Brian Quinn</account>
     <velocity_scheme>Average of 3 iterations</velocity_scheme>
-    <current_velocity>1</current_velocity>
+    <current_velocity>10</current_velocity>
     <initial_velocity>10</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
     <labels></labels>
@@ -516,20 +525,20 @@
     <id>125701</id>
     <name>Demandbase</name>
     <iteration_length type="integer">1</iteration_length>
-    <week_start_day>Monday</week_start_day>
-    <point_scale>0,1,2,3,5,8</point_scale>
+    <week_start_day>Wednesday</week_start_day>
+    <point_scale>0,1,2,3</point_scale>
     <account>Chris Kelly</account>
     <velocity_scheme>Average of 3 iterations</velocity_scheme>
-    <current_velocity>7</current_velocity>
-    <initial_velocity>10</initial_velocity>
+    <current_velocity>9</current_velocity>
+    <initial_velocity>20</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
-    <labels>blocked,needs-prioritization</labels>
-    <last_activity_at type="datetime">2010/11/11 10:03:19 EST</last_activity_at>
+    <labels>blocked,needs-assets,needs-prioritization</labels>
+    <last_activity_at type="datetime">2010/11/28 21:23:16 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
     <bugs_and_chores_are_estimatable>true</bugs_and_chores_are_estimatable>
-    <commit_mode>false</commit_mode>
+    <commit_mode>true</commit_mode>
     <memberships>
       <membership>
         <id>399324</id>
@@ -648,6 +657,38 @@
     </integrations>
   </project>
   <project>
+    <id>153937</id>
+    <name>Demo</name>
+    <iteration_length type="integer">1</iteration_length>
+    <week_start_day>Monday</week_start_day>
+    <point_scale>0,1,2,3</point_scale>
+    <account>Matt Todd</account>
+    <velocity_scheme>Average of 3 iterations</velocity_scheme>
+    <current_velocity>10</current_velocity>
+    <initial_velocity>10</initial_velocity>
+    <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
+    <labels></labels>
+    <last_activity_at type="datetime">2010/11/29 01:40:04 EST</last_activity_at>
+    <allow_attachments>true</allow_attachments>
+    <public>false</public>
+    <use_https>false</use_https>
+    <bugs_and_chores_are_estimatable>false</bugs_and_chores_are_estimatable>
+    <commit_mode>false</commit_mode>
+    <memberships>
+      <membership>
+        <id>482969</id>
+        <person>
+          <email>mtodd@highgroove.com</email>
+          <name>Matt Todd</name>
+          <initials>MT</initials>
+        </person>
+        <role>Owner</role>
+      </membership>
+    </memberships>
+    <integrations>
+    </integrations>
+  </project>
+  <project>
     <id>121185</id>
     <name>Extract</name>
     <iteration_length type="integer">1</iteration_length>
@@ -659,7 +700,7 @@
     <initial_velocity>10</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
     <labels></labels>
-    <last_activity_at type="datetime">2010/10/26 09:58:40 EDT</last_activity_at>
+    <last_activity_at type="datetime">2010/11/26 23:27:20 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -823,15 +864,15 @@
     <id>126757</id>
     <name>Highgroove</name>
     <iteration_length type="integer">1</iteration_length>
-    <week_start_day>Wednesday</week_start_day>
-    <point_scale>0,1,2,3,5,8</point_scale>
+    <week_start_day>Monday</week_start_day>
+    <point_scale>0,1,2,3</point_scale>
     <account>Chris Kelly</account>
     <velocity_scheme>Average of 3 iterations</velocity_scheme>
-    <current_velocity>21</current_velocity>
+    <current_velocity>17</current_velocity>
     <initial_velocity>10</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
-    <labels>billing,blog,demo,needs-input,professional development,sales,waiting-on</labels>
-    <last_activity_at type="datetime">2010/11/11 09:54:02 EST</last_activity_at>
+    <labels>billing,blog,demo,hiring,needs-input,professional development,sales,waiting-on</labels>
+    <last_activity_at type="datetime">2010/11/24 15:13:58 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -1043,6 +1084,47 @@
           <email>megan@highgroove.com</email>
           <name>Megan Key</name>
           <initials>MK</initials>
+        </person>
+        <role>Owner</role>
+      </membership>
+    </memberships>
+    <integrations>
+    </integrations>
+  </project>
+  <project>
+    <id>152013</id>
+    <name>Ken Goff Realty</name>
+    <iteration_length type="integer">1</iteration_length>
+    <week_start_day>Monday</week_start_day>
+    <point_scale>0,1,2,3</point_scale>
+    <account>Matt Todd</account>
+    <velocity_scheme>Average of 3 iterations</velocity_scheme>
+    <current_velocity>1</current_velocity>
+    <initial_velocity>10</initial_velocity>
+    <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
+    <labels></labels>
+    <last_activity_at type="datetime">2010/11/27 12:09:49 EST</last_activity_at>
+    <allow_attachments>true</allow_attachments>
+    <public>false</public>
+    <use_https>false</use_https>
+    <bugs_and_chores_are_estimatable>false</bugs_and_chores_are_estimatable>
+    <commit_mode>false</commit_mode>
+    <memberships>
+      <membership>
+        <id>477993</id>
+        <person>
+          <email>mtodd@highgroove.com</email>
+          <name>Matt Todd</name>
+          <initials>MT</initials>
+        </person>
+        <role>Owner</role>
+      </membership>
+      <membership>
+        <id>477995</id>
+        <person>
+          <email>kgrealty@gmail.com</email>
+          <name>Ken Goff</name>
+          <initials>KG</initials>
         </person>
         <role>Owner</role>
       </membership>
@@ -1507,14 +1589,14 @@
     <name>reOneSpot</name>
     <iteration_length type="integer">1</iteration_length>
     <week_start_day>Monday</week_start_day>
-    <point_scale>0,1,2,3</point_scale>
-    <account>James Gray</account>
+    <point_scale>0,1,2,3,5,8</point_scale>
+    <account>Charles Brian Quinn</account>
     <velocity_scheme>Average of 1 iteration</velocity_scheme>
     <current_velocity>10</current_velocity>
     <initial_velocity>10</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
-    <labels>.0.0.6,0.0.1,0.0.2,0.0.3,0.0.4,0.0.5,0.0.7,2.1.1,2.1.2,2.1.3,3.0.0,3.0.0 / 6.3.1,3.0.0/0.0.2,4.0.0,4.1.0,4.2.0,4.3.0,5.1.1 &amp; 5.1.2,5.2.0,5.3.0,6.0.0 &amp; 6.0.1,6.0.2,6.1.0,6.1.1,6.2.0,6.3.0/6.1.0/8.4.0,6.4.0 &amp; 6.4.5,6.5.0,7.0.0,8.1.0,8.2.0,8.3.0,bug,client listing profile,documentation,future,html/formatting,section 7</labels>
-    <last_activity_at type="datetime">2010/11/04 19:16:49 EDT</last_activity_at>
+    <labels>.0.0.6,0.0.1,0.0.2,0.0.3,0.0.4,0.0.5,0.0.7,2.1.1,2.1.2,2.1.3,3.0.0,3.0.0 / 6.3.1,3.0.0/0.0.2,4.0.0,4.1.0,4.2.0,4.3.0,5.1.1 &amp; 5.1.2,5.2.0,5.3.0,6.0.0 &amp; 6.0.1,6.0.2,6.1.0,6.1.1,6.2.0,6.3.0/6.1.0/8.4.0,6.4.0 &amp; 6.4.5,6.5.0,7.0.0,8.1.0,8.2.0,8.3.0,bug,client listing profile,documentation,future,html/formatting,needs-feedback,section 7,sms-notifications</labels>
+    <last_activity_at type="datetime">2010/11/21 21:33:59 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -1623,6 +1705,15 @@
           <initials>CBQ</initials>
         </person>
         <role>Owner</role>
+      </membership>
+      <membership>
+        <id>471337</id>
+        <person>
+          <email>megan@highgroove.com</email>
+          <name>Megan Key</name>
+          <initials>MK</initials>
+        </person>
+        <role>Member</role>
       </membership>
     </memberships>
     <integrations>
@@ -1735,16 +1826,16 @@
   <project>
     <id>127959</id>
     <name>WaitingTime</name>
-    <iteration_length type="integer">2</iteration_length>
-    <week_start_day>Wednesday</week_start_day>
+    <iteration_length type="integer">1</iteration_length>
+    <week_start_day>Monday</week_start_day>
     <point_scale>0,1,2,3,5,8</point_scale>
     <account>Charles Brian Quinn</account>
-    <velocity_scheme>Average of 3 iterations</velocity_scheme>
-    <current_velocity>31</current_velocity>
-    <initial_velocity>32</initial_velocity>
+    <velocity_scheme>Average of 2 iterations</velocity_scheme>
+    <current_velocity>8</current_velocity>
+    <initial_velocity>8</initial_velocity>
     <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
-    <labels>cant-fix,needs-assets,needs-feedback,needs-prioritization</labels>
-    <last_activity_at type="datetime">2010/11/11 08:37:00 EST</last_activity_at>
+    <labels>cant-fix,needs-assets,needs-feedback,needs-prioritization,reference-only</labels>
+    <last_activity_at type="datetime">2010/11/28 17:47:18 EST</last_activity_at>
     <allow_attachments>true</allow_attachments>
     <public>false</public>
     <use_https>false</use_https>
@@ -1804,6 +1895,15 @@
           <initials>SP</initials>
         </person>
         <role>Owner</role>
+      </membership>
+      <membership>
+        <id>456195</id>
+        <person>
+          <email>james@digitalsmithy.com</email>
+          <name>James Poelke</name>
+          <initials>JP</initials>
+        </person>
+        <role>Member</role>
       </membership>
     </memberships>
     <integrations>

@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stories type="array" count="12" total="12">
-  <story>
-    <id type="integer">6822209</id>
-    <project_id type="integer">153937</project_id>
-    <story_type>chore</story_type>
-    <url>http://www.pivotaltracker.com/story/show/6822209</url>
-    <current_state>unstarted</current_state>
-    <description></description>
-    <name>Stuff needs to be defined</name>
-    <requested_by>Matt Todd</requested_by>
-    <created_at type="datetime">2010/11/29 01:39:41 EST</created_at>
-    <updated_at type="datetime">2010/11/29 01:39:45 EST</updated_at>
-  </story>
+<stories type="array" count="9" filter="type:feature" total="9">
   <story>
     <id type="integer">6821125</id>
     <project_id type="integer">153937</project_id>
@@ -63,30 +51,6 @@
     <requested_by>Matt Todd</requested_by>
     <created_at type="datetime">2010/11/29 00:28:04 EST</created_at>
     <updated_at type="datetime">2010/11/29 00:28:08 EST</updated_at>
-  </story>
-  <story>
-    <id type="integer">6821121</id>
-    <project_id type="integer">153937</project_id>
-    <story_type>release</story_type>
-    <url>http://www.pivotaltracker.com/story/show/6821121</url>
-    <current_state>unstarted</current_state>
-    <description></description>
-    <name>Stuff is working</name>
-    <requested_by>Matt Todd</requested_by>
-    <created_at type="datetime">2010/11/29 00:30:20 EST</created_at>
-    <updated_at type="datetime">2010/11/29 00:30:33 EST</updated_at>
-  </story>
-  <story>
-    <id type="integer">6822203</id>
-    <project_id type="integer">153937</project_id>
-    <story_type>bug</story_type>
-    <url>http://www.pivotaltracker.com/story/show/6822203</url>
-    <current_state>unstarted</current_state>
-    <description></description>
-    <name>Other Users can do anything</name>
-    <requested_by>Matt Todd</requested_by>
-    <created_at type="datetime">2010/11/29 01:39:21 EST</created_at>
-    <updated_at type="datetime">2010/11/29 01:40:07 EST</updated_at>
   </story>
   <story>
     <id type="integer">6821087</id>

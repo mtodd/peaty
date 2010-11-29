@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story>
+  <id type="integer">6821121</id>
+  <project_id type="integer">153937</project_id>
+  <story_type>release</story_type>
+  <url>http://www.pivotaltracker.com/story/show/6821121</url>
+  <current_state>unstarted</current_state>
+  <description></description>
+  <name>Stuff is working</name>
+  <requested_by>Matt Todd</requested_by>
+  <created_at type="datetime">2010/11/29 00:30:20 EST</created_at>
+  <updated_at type="datetime">2010/11/29 00:30:33 EST</updated_at>
+</story>

@@ -1,74 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <id>125701</id>
-  <name>Demandbase</name>
+  <id>153937</id>
+  <name>Demo</name>
   <iteration_length type="integer">1</iteration_length>
   <week_start_day>Monday</week_start_day>
-  <point_scale>0,1,2,3,5,8</point_scale>
-  <account>Chris Kelly</account>
+  <point_scale>0,1,2,3</point_scale>
+  <account>Matt Todd</account>
   <velocity_scheme>Average of 3 iterations</velocity_scheme>
-  <current_velocity>7</current_velocity>
+  <current_velocity>10</current_velocity>
   <initial_velocity>10</initial_velocity>
   <number_of_done_iterations_to_show>12</number_of_done_iterations_to_show>
-  <labels>blocked,needs-prioritization</labels>
-  <last_activity_at type="datetime">2010/11/11 10:03:19 EST</last_activity_at>
+  <labels></labels>
+  <last_activity_at type="datetime">2010/11/29 01:40:04 EST</last_activity_at>
   <allow_attachments>true</allow_attachments>
   <public>false</public>
   <use_https>false</use_https>
-  <bugs_and_chores_are_estimatable>true</bugs_and_chores_are_estimatable>
+  <bugs_and_chores_are_estimatable>false</bugs_and_chores_are_estimatable>
   <commit_mode>false</commit_mode>
   <memberships>
     <membership>
-      <id>399324</id>
-      <person>
-        <email>chris@highgroove.com</email>
-        <name>Chris Kelly</name>
-        <initials>CK</initials>
-      </person>
-      <role>Owner</role>
-    </membership>
-    <membership>
-      <id>399327</id>
+      <id>482969</id>
       <person>
         <email>mtodd@highgroove.com</email>
         <name>Matt Todd</name>
         <initials>MT</initials>
-      </person>
-      <role>Owner</role>
-    </membership>
-    <membership>
-      <id>399328</id>
-      <person>
-        <email>cbq@highgroove.com</email>
-        <name>Charles Brian Quinn</name>
-        <initials>CBQ</initials>
-      </person>
-      <role>Member</role>
-    </membership>
-    <membership>
-      <id>399611</id>
-      <person>
-        <email>MLongo@demandbase.com</email>
-        <name>Martin Longo</name>
-        <initials>ML</initials>
-      </person>
-      <role>Owner</role>
-    </membership>
-    <membership>
-      <id>400610</id>
-      <person>
-        <email>megan@highgroove.com</email>
-        <name>Megan Key</name>
-        <initials>MK</initials>
-      </person>
-      <role>Member</role>
-    </membership>
-    <membership>
-      <id>416060</id>
-      <person>
-        <email>lbernstein@demandbase.com</email>
-        <name>Larry Bernstein</name>
-        <initials>LB</initials>
       </person>
       <role>Owner</role>
     </membership>
