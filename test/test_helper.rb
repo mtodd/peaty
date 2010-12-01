@@ -21,12 +21,14 @@ uri = "http://www.pivotaltracker.com/services/v3"
   "/projects/#{PROJECT_ID}"                               => "project",
   "/projects/#{PROJECT_ID}/stories"                       => "stories",
   "/projects/#{PROJECT_ID}/iterations"                    => "iterations",
+  "/projects/#{PROJECT_ID}/iterations/done"               => "iterations_done",
   "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"           => "story",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Afeature" => "features",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Arelease" => "releases",
   "/projects/#{PROJECT_ID}/stories/#{RELEASE_ID}"         => "release",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Achore"   => "chores",
   "/projects/#{PROJECT_ID}/stories?filter=type%3Abug"     => "bugs",
+  "/projects/#{PROJECT_ID}/stories?filter=includedone%3Atrue" => "stories_with_done",
 }.each do |(path, fixture)|
   FakeWeb.register_uri(:get, uri + path, :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "%s.xml" % fixture)))
 end

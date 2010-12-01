@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stories type="array" count="14" filter="includedone:true" total="14">
+  <story>
+    <id type="integer">6914449</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6914449</url>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Stuff is awesome</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/12/01 00:46:24 EST</created_at>
+    <updated_at type="datetime">2010/12/01 00:47:42 EST</updated_at>
+    <accepted_at type="datetime">2010/11/26 12:00:00 EST</accepted_at>
+  </story>
+  <story>
+    <id type="integer">6914397</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6914397</url>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Stuff has been thought of</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/12/01 00:41:53 EST</created_at>
+    <updated_at type="datetime">2010/12/01 00:42:07 EST</updated_at>
+    <accepted_at type="datetime">2010/12/01 00:42:07 EST</accepted_at>
+    <deadline type="datetime">2010/12/01 12:00:00 EST</deadline>
+    <labels>hmm</labels>
+  </story>
+  <story>
+    <id type="integer">6822209</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>chore</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6822209</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Stuff needs to be defined</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 01:39:41 EST</created_at>
+    <updated_at type="datetime">2010/11/29 01:39:45 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821125</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821125</url>
+    <estimate type="integer">0</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Stuff can be done</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:30:39 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:31:12 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821071</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821071</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Users can do stuff</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:27:38 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:27:51 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821077</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821077</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Admins can also do stuff</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:27:46 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:27:53 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821081</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821081</url>
+    <estimate type="integer">3</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Other Users cannot do stuff</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:28:04 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:28:08 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821121</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821121</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Stuff is working</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:30:20 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:30:33 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6822203</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>bug</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6822203</url>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Other Users can do anything</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 01:39:21 EST</created_at>
+    <updated_at type="datetime">2010/11/29 01:40:07 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821087</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821087</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Admins can do stuff as other Users</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:28:26 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:28:31 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821093</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821093</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Stuffs can be searched for by Users</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:28:45 EST</created_at>
+    <updated_at type="datetime">2010/12/01 00:45:55 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821103</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821103</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Stuff can be tagged</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:29:07 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:29:09 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821107</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821107</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description></description>
+    <name>Tags make stuff show up higher in the search results</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:29:32 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:30:00 EST</updated_at>
+  </story>
+  <story>
+    <id type="integer">6821113</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6821113</url>
+    <estimate type="integer">1</estimate>
+    <current_state>unscheduled</current_state>
+    <description></description>
+    <name>Stuff can do magic</name>
+    <requested_by>Matt Todd</requested_by>
+    <created_at type="datetime">2010/11/29 00:30:06 EST</created_at>
+    <updated_at type="datetime">2010/11/29 00:30:08 EST</updated_at>
+  </story>
+</stories>

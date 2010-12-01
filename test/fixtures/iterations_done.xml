@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterations type="array">
+  <iteration>
+    <id type="integer">1</id>
+    <number type="integer">1</number>
+    <start type="datetime">2010/11/22 00:00:00 EST</start>
+    <finish type="datetime">2010/11/29 00:00:00 EST</finish>
+    <stories type="array">
+      <story>
+        <id type="integer">6914449</id>
+        <project_id type="integer">153937</project_id>
+        <story_type>release</story_type>
+        <url>http://www.pivotaltracker.com/story/show/6914449</url>
+        <current_state>accepted</current_state>
+        <description></description>
+        <name>Stuff is awesome</name>
+        <requested_by>Chris Kelly</requested_by>
+        <owned_by>Matt Todd</owned_by>
+        <created_at type="datetime">2010/12/01 00:46:24 EST</created_at>
+        <updated_at type="datetime">2010/12/01 00:47:42 EST</updated_at>
+        <accepted_at type="datetime">2010/11/26 12:00:00 EST</accepted_at>
+      </story>
+    </stories>
+  </iteration>
+</iterations>

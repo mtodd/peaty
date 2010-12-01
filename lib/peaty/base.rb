@@ -8,15 +8,16 @@ module Peaty
       :created_since, :modified_since,
       :requester, :owner,
       :mywork,
-      :integration, :external_id, :has_external_id
+      :integration, :external_id, :has_external_id,
+      :includedone
     ]
     
     def initialize(attrs)
       raise ArgumentError unless attrs.is_a?(Hash)
       @connection = self.class.connection
       # if we get a hash like {"item"=>{...}}, pull out the attributes
-      @attributes = if attrs.key?(self.class.element);  attrs.delete(self.class.element) 
-                    else                                attrs
+      @attributes = if attrs.key?(self.class.element);  attrs.dup.delete(self.class.element) 
+                    else                                attrs.dup
                     end
     end
     
@@ -44,16 +45,18 @@ module Peaty
       # returns an array of results, regardless of one or many results.
       def parse(response, element)
         result = JSON.parse(XmlToJson.transform(response))
-        Array.wrap(result[element]).map{ |r| new(r) }
+        Array.wrap(result[element] || result[element.pluralize]).map{ |r| new(r) }
       end
       
       def find(*args)
         options = args.extract_options!
         selection = args.shift
         case selection
-        when Numeric  then self.find_by_id(selection, options)
-        when :first   then self.first(options)
-        when :all     then self.all(options)
+        when :first;  self.first(options)
+        when :all;    self.all(options)
+        when Array;   selection.map{ |s| self.find_by_id(s, options) }
+        when Numeric; self.find_by_id(selection, options)
+        else          self.find_by_id(selection, options)
         end
       end
       
@@ -64,7 +67,7 @@ module Peaty
       end
       
       def all(options = {})
-        self.parse(self.connection[self.collection_path(options)].get(:params => self.filter_options(options)).body, self.element.pluralize).
+        self.parse(self.connection[self.collection_path(options)].get(:params => self.filter_options(options)).body, self.element).
           each { |e| e.connection = self.connection }
       end
       
