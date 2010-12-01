@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stories type="array" count="1" filter="type:release" total="1">
+<stories type="array" count="2" filter="type:release" total="2">
+  <story>
+    <id type="integer">6914397</id>
+    <project_id type="integer">153937</project_id>
+    <story_type>release</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6914397</url>
+    <current_state>accepted</current_state>
+    <description></description>
+    <name>Stuff has been thought of</name>
+    <requested_by>Chris Kelly</requested_by>
+    <owned_by>Matt Todd</owned_by>
+    <created_at type="datetime">2010/12/01 00:41:53 EST</created_at>
+    <updated_at type="datetime">2010/12/01 00:42:07 EST</updated_at>
+    <accepted_at type="datetime">2010/12/01 00:42:07 EST</accepted_at>
+    <deadline type="datetime">2010/12/01 12:00:00 EST</deadline>
+    <labels>hmm</labels>
+  </story>
   <story>
     <id type="integer">6821121</id>
     <project_id type="integer">153937</project_id>
