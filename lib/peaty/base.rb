@@ -22,7 +22,16 @@ module Peaty
     end
     
     def method_missing(method, *args)
-      return self.attributes[method.to_s] if respond_to?(method)
+      method.to_s =~ /^([^\?\=]+)(\?|\=)?$/
+      method_name, predicate = $1, $2
+      
+      case predicate
+      when '?'; return self.attributes[method_name].present?
+      when '='; return self.attributes[method_name] = args.first
+      else
+        return self.attributes[method_name] if respond_to?(method_name)
+      end
+      
       super
     end
     def respond_to?(method)
