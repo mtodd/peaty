@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{peaty}
-  s.version = "0.3.0"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
-  s.date = %q{2010-12-01}
+  s.date = %q{2011-03-01}
   s.description = %q{Just another Pivotal Tracker API Implementation}
   s.email = %q{chiology@gmail.com}
   s.files = [
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
     "test/.gitignore",
     "test/fixtures/bugs.xml",
     "test/fixtures/chores.xml",
+    "test/fixtures/create_story.xml",
     "test/fixtures/features.xml",
     "test/fixtures/iterations.xml",
     "test/fixtures/iterations_done.xml",
@@ -46,7 +47,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mtodd/peaty}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{Pivotal Tracker API Implementation}
   s.test_files = [
     "test/peaty_test.rb",
@@ -54,7 +55,6 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
