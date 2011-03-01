@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story>
+  <id type="integer">10564869</id>
+  <project_id type="integer">153937</project_id>
+  <story_type>feature</story_type>
+  <url>http://www.pivotaltracker.com/story/show/10564869</url>
+  <estimate type="integer">-1</estimate>
+  <current_state>unscheduled</current_state>
+  <description></description>
+  <name>Test</name>
+  <requested_by>Matt Todd</requested_by>
+  <created_at type="datetime">2011/03/01 00:40:04 EST</created_at>
+  <updated_at type="datetime">2011/03/01 00:40:04 EST</updated_at>
+</story>

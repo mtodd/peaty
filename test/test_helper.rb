@@ -33,6 +33,10 @@ uri = "http://www.pivotaltracker.com/services/v3"
   FakeWeb.register_uri(:get, uri + path, :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "%s.xml" % fixture)))
 end
 
+FakeWeb.register_uri(:post, Regexp.new(uri + "/projects/#{PROJECT_ID}/stories"),
+                            :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "create_story.xml")))
+                            # http://www.pivotaltracker.com/services/v3/projects/153937/stories?story%5Bname%5D=Test&story%5Bproject_id%5D=153937&story%5Bestimate%5D=3
+
 class User < Struct.new(:pivotal_tracker_api_key)
   pivotal_tracker_for :pivotal_tracker_api_key
 end

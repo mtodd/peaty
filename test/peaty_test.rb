@@ -78,6 +78,18 @@ class PeatyTest < Test::Unit::TestCase
     assert_equal :chore, @user.pivotal_tracker_projects.find(PROJECT_ID).chores.first.story_type
   end
   
+  def test_user_can_create_a_new_story_for_a_project
+    story = @user.pivotal_tracker_projects.find(PROJECT_ID).stories.build(:name => name = "Test")
+    assert story.is_a?(Peaty::Story)
+    assert story.new_record?
+    assert_equal PROJECT_ID, story.project_id
+    assert_equal name, story.name
+    
+    story.estimate = 3
+    assert story.save
+    assert !story.new_record?
+  end
+  
   # Tests for Iterations
   def test_user_can_fetch_a_projects_iterations
     project = @user.pivotal_tracker_projects.find(PROJECT_ID)

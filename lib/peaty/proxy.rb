@@ -4,7 +4,7 @@ module Peaty
     attr_accessor :target, :connection, :options
     
     def initialize(target, connection, options = {})
-      @target, @connection, @options = target, connection, options
+      @target, @connection, @options = target, connection, options.with_indifferent_access
     end
     
     def method_missing(method, *args)
@@ -23,6 +23,10 @@ module Peaty
       @options[:rest] = Array.wrap(@options.delete(:rest)).concat(args)
       
       self
+    end
+    
+    def self.build(attrs = {})
+      @target.build(@options.merge(attrs.with_indifferent_access))
     end
   end
   

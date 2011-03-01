@@ -21,6 +21,10 @@ module Peaty
                     end
     end
     
+    def self.build(attrs = {})
+      new(attrs)
+    end
+    
     def method_missing(method, *args)
       method.to_s =~ /^([^\?\=]+)(\?|\=)?$/
       method_name, predicate = $1, $2
@@ -40,6 +44,15 @@ module Peaty
     
     def id
       self.attributes["id"]
+    end
+    
+    def new_record?
+      id.nil? or id.to_i.zero?
+    end
+    
+    def save
+      query_string = @attributes.map{ |k,v| "#{CGI.escape("%s[%s]" % [self.class.element, k.to_s])}=#{CGI.escape(v.to_s)}" }.join('&')
+      @attributes.replace self.class.parse(self.connection["%s?%s" % [self.class.collection_path(@attributes), query_string]].post(:params => @attributes).body, self.class.element).first.attributes
     end
     
     class << self
