@@ -3,7 +3,7 @@ module Peaty
   class Story < Base
     
     def story_type
-      self.attributes["story_type"].to_sym
+      self.attributes["story_type"].to_sym if story_type?
     end
     alias type story_type
     
