@@ -7,6 +7,7 @@ require 'active_support/core_ext/array/extract_options'
 require 'active_support/core_ext/array/wrap'
 require 'active_support/core_ext/hash/indifferent_access'
 require 'active_support/core_ext/hash/reverse_merge'
+require 'active_support/core_ext/object/blank'
 
 require 'rest-client'
 require 'nokogiri'
