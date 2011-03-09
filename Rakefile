@@ -19,17 +19,6 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Just another Pivotal Tracker API Implementation}
   gem.email = "chiology@gmail.com"
   gem.authors = ["Matt Todd"]
-  
-  gem.add_runtime_dependency 'nokogiri', '1.4.3.1'
-  
-  gem.add_development_dependency 'yajl-ruby', '0.7.8'
-  gem.add_development_dependency 'activesupport', '~> 3.0.1'
-  gem.add_development_dependency 'builder', '2.1.2'
-  
-  gem.add_development_dependency 'rspec', '2.1.0'
-  gem.add_development_dependency 'bundler', '~> 1.0.0'
-  gem.add_development_dependency 'jeweler', '~> 1.5.0.pre6'
-  gem.add_development_dependency 'rails_code_qa', '>= 0'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
