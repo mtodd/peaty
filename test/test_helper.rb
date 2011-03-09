@@ -16,7 +16,7 @@ PROJECT_ID  = 153937
 STORY_ID    = 6821071
 RELEASE_ID  = 6821121
 
-uri = "http://www.pivotaltracker.com/services/v3"
+uri = "https://www.pivotaltracker.com/services/v3"
 { "/projects"                                             => "projects",
   "/projects/#{PROJECT_ID}"                               => "project",
   "/projects/#{PROJECT_ID}/stories"                       => "stories",
