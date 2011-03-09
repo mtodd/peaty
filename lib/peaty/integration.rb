@@ -13,7 +13,7 @@ module Peaty
       def __pivotal_tracker_connection
         @__pivotal_tracker_connection ||= begin
           RestClient.log ||= STDOUT
-          RestClient::Resource.new("http://www.pivotaltracker.com/services/v3", :headers => {"X-TrackerToken" => self.send(self.class.__pivotal_tracker_options[:attribute])})
+          RestClient::Resource.new("https://www.pivotaltracker.com/services/v3", :headers => {"X-TrackerToken" => self.send(self.class.__pivotal_tracker_options[:attribute])})
         end
       end
       def __pivotal_tracker_projects
