@@ -1,16 +1,15 @@
 source "http://rubygems.org"
 
-gem 'activesupport', '~> 3.0.1'
+gem 'activesupport', '~> 3.0.4'
 
 gem 'nokogiri'
 gem 'nokogiri-happymapper'
 
 gem 'rest-client'
-gem 'xml_to_json', '0.0.1'
+gem 'xml_to_json', '~> 0.0.2'
 gem 'yajl-ruby'
 
 group :development do
-  gem 'yajl-ruby'
   gem 'builder'
 
   gem "rspec", "2.1.0"
