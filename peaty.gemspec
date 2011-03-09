@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{peaty}
-  s.version = "0.4.0"
+  s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
-  s.date = %q{2011-03-01}
+  s.date = %q{2011-03-09}
   s.description = %q{Just another Pivotal Tracker API Implementation}
   s.email = %q{chiology@gmail.com}
   s.files = [
@@ -47,7 +47,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mtodd/peaty}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.4.2}
   s.summary = %q{Pivotal Tracker API Implementation}
   s.test_files = [
     "test/peaty_test.rb",
@@ -58,13 +58,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.1"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.4"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri-happymapper>, [">= 0"])
       s.add_runtime_dependency(%q<rest-client>, [">= 0"])
-      s.add_runtime_dependency(%q<xml_to_json>, ["= 0.0.1"])
+      s.add_runtime_dependency(%q<xml_to_json>, ["~> 0.0.2"])
       s.add_runtime_dependency(%q<yajl-ruby>, [">= 0"])
-      s.add_development_dependency(%q<yajl-ruby>, [">= 0"])
       s.add_development_dependency(%q<builder>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["= 2.1.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -79,12 +78,11 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.0.pre6"])
       s.add_development_dependency(%q<rails_code_qa>, [">= 0"])
     else
-      s.add_dependency(%q<activesupport>, ["~> 3.0.1"])
+      s.add_dependency(%q<activesupport>, ["~> 3.0.4"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
       s.add_dependency(%q<nokogiri-happymapper>, [">= 0"])
       s.add_dependency(%q<rest-client>, [">= 0"])
-      s.add_dependency(%q<xml_to_json>, ["= 0.0.1"])
-      s.add_dependency(%q<yajl-ruby>, [">= 0"])
+      s.add_dependency(%q<xml_to_json>, ["~> 0.0.2"])
       s.add_dependency(%q<yajl-ruby>, [">= 0"])
       s.add_dependency(%q<builder>, [">= 0"])
       s.add_dependency(%q<rspec>, ["= 2.1.0"])
@@ -101,12 +99,11 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rails_code_qa>, [">= 0"])
     end
   else
-    s.add_dependency(%q<activesupport>, ["~> 3.0.1"])
+    s.add_dependency(%q<activesupport>, ["~> 3.0.4"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
     s.add_dependency(%q<nokogiri-happymapper>, [">= 0"])
     s.add_dependency(%q<rest-client>, [">= 0"])
-    s.add_dependency(%q<xml_to_json>, ["= 0.0.1"])
-    s.add_dependency(%q<yajl-ruby>, [">= 0"])
+    s.add_dependency(%q<xml_to_json>, ["~> 0.0.2"])
     s.add_dependency(%q<yajl-ruby>, [">= 0"])
     s.add_dependency(%q<builder>, [">= 0"])
     s.add_dependency(%q<rspec>, ["= 2.1.0"])
