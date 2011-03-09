@@ -1,3 +1,4 @@
+require 'pathname'
 require 'logger'
 
 require 'active_support/concern'
@@ -14,7 +15,7 @@ require 'nokogiri'
 require 'xml_to_json'
 require 'yajl/json_gem'
 
-$:.unshift File.dirname(__FILE__)
+$:.unshift Pathname.new(__FILE__).dirname
 require 'peaty/integration'
 require 'peaty/proxy'
 require 'peaty/base'
