@@ -14,7 +14,7 @@ require 'nokogiri'
 require 'xml_to_json'
 require 'yajl/json_gem'
 
-$:.unshift Pathname.new(__FILE__).dirname
+$:.unshift File.dirname(__FILE__)
 require 'peaty/integration'
 require 'peaty/proxy'
 require 'peaty/base'
