@@ -79,6 +79,10 @@ class PeatyTest < Test::Unit::TestCase
   end
   
   def test_user_can_create_a_new_story_for_a_project
+    FakeWeb.register_uri(:post, Regexp.new(PT_BASE_URI + "/projects/#{PROJECT_ID}/stories"),
+                                :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "create_story.xml")))
+                                # http://www.pivotaltracker.com/services/v3/projects/153937/stories?story%5Bname%5D=Test&story%5Bproject_id%5D=153937&story%5Bestimate%5D=3
+    
     story = @user.pivotal_tracker_projects.find(PROJECT_ID).stories.build(:name => name = "Test")
     assert story.is_a?(Peaty::Story)
     assert story.new_record?
@@ -88,6 +92,17 @@ class PeatyTest < Test::Unit::TestCase
     story.estimate = 3
     assert story.save
     assert !story.new_record?
+  end
+  
+  def test_user_can_get_error_messages_when_trying_to_create_a_new_story_for_a_project_that_fails
+    FakeWeb.register_uri(:post, Regexp.new(PT_BASE_URI + "/projects/#{PROJECT_ID}/stories"),
+                                :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "create_story_error.xml")),
+                                :status => 422)
+    
+    story = @user.pivotal_tracker_projects.find(PROJECT_ID).stories.build(:title => "Title Doesn't Exist")
+    assert !story.save
+    assert story.new_record?
+    assert_equal "unknown attribute: title", story.error
   end
   
   # Tests for Iterations

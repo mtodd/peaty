@@ -1,7 +1,7 @@
 module Peaty
   
   class Base
-    attr_accessor :attributes, :connection
+    attr_accessor :attributes, :connection, :error
     
     FILTERS = [
       :id, :type, :state, :label, :has_attachment,
@@ -50,9 +50,17 @@ module Peaty
       id.nil? or id.to_i.zero?
     end
     
+    def error?
+      !!@error
+    end
+    
     def save
-      query_string = @attributes.map{ |k,v| "#{CGI.escape("%s[%s]" % [self.class.element, k.to_s])}=#{CGI.escape(v.to_s)}" }.join('&')
-      @attributes.replace self.class.parse(self.connection["%s?%s" % [self.class.collection_path(@attributes), query_string]].post(:params => @attributes).body, self.class.element).first.attributes
+      @error = nil # reset error
+      @attributes.delete_if{ |(k,v)| v.nil? } # ignore nil attributes
+      @attributes.replace self.class.parse(self.connection[self.class.collection_path(@attributes)].post(self.class.element => @attributes).body, self.class.element).first.attributes
+    rescue RestClient::UnprocessableEntity => e
+      @error = JSON.parse(XmlToJson.transform(e.response.body))["message"]
+      false
     end
     
     class << self
