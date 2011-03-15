@@ -26,7 +26,7 @@ require 'peaty/user'
 
 module Peaty
   
-  VERSION = "0.4.0"
+  VERSION = "0.4.6"
   
   def self.root
     @root ||= Pathname.new(__FILE__).dirname.parent
