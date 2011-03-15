@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{peaty}
-  s.version = "0.4.5"
+  s.version = "0.4.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
-  s.date = %q{2011-03-09}
+  s.date = %q{2011-03-15}
   s.description = %q{Just another Pivotal Tracker API Implementation}
   s.email = %q{chiology@gmail.com}
   s.files = [
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "test/fixtures/bugs.xml",
     "test/fixtures/chores.xml",
     "test/fixtures/create_story.xml",
+    "test/fixtures/create_story_error.xml",
     "test/fixtures/features.xml",
     "test/fixtures/iterations.xml",
     "test/fixtures/iterations_done.xml",
