@@ -56,7 +56,7 @@ module Peaty
     
     def save
       @error = nil # reset error
-      @attributes.delete_if{ |(k,v)| v.nil? } # ignore nil attributes
+      @attributes.delete_if{ |k, v| v.nil? } # ignore nil attributes
       @attributes.replace self.class.parse(self.connection[self.class.collection_path(@attributes)].post(self.class.element => @attributes).body, self.class.element).first.attributes
     rescue RestClient::UnprocessableEntity => e
       @error = JSON.parse(XmlToJson.transform(e.response.body))["message"]
