@@ -62,6 +62,40 @@ class PeatyTest < Test::Unit::TestCase
     done = project.iterations.find(:done)
     assert done.stories.any?{ |s| s.id == story.id }
   end
+
+  def test_user_can_move_stories_after_other_stories
+    project = @user.pivotal_tracker_projects.find(PROJECT_ID)
+    stories = project.stories.all
+
+    story1, story2 = stories[0], stories[1]
+
+    moves_path = "/projects/#{PROJECT_ID}/stories/#{story1.id}/moves?move\[move\]=after&move\[target\]=#{story2.id}"
+    FakeWeb.register_uri(:post,
+                         PT_BASE_URI + moves_path,
+                         :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "move_after.xml")))
+
+    story1.move(:after => story2)
+
+    assert_equal 'POST', FakeWeb.last_request.method
+    assert_equal PT_BASE_PATH + moves_path, FakeWeb.last_request.path
+  end
+
+  def test_user_can_move_stories_before_other_stories
+    project = @user.pivotal_tracker_projects.find(PROJECT_ID)
+    stories = project.stories.all
+
+    story1, story2 = stories[0], stories[1]
+
+    moves_path = "/projects/#{PROJECT_ID}/stories/#{story2.id}/moves?move\[move\]=before&move\[target\]=#{story1.id}"
+    FakeWeb.register_uri(:post,
+                         PT_BASE_URI + moves_path,
+                         :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "move_before.xml")))
+
+    story2.move(:before => story1)
+
+    assert_equal 'POST', FakeWeb.last_request.method
+    assert_equal PT_BASE_PATH + moves_path, FakeWeb.last_request.path
+  end
   
   def test_user_can_fetch_all_releases_for_a_project_via_stories
     assert !@user.pivotal_tracker_projects.find(PROJECT_ID).stories(:type => :release).all.empty?
