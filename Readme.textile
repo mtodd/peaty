@@ -31,6 +31,20 @@ end
 
 See how current API works for selecting types of stories (chores, bugs, releases, and features)
 
+h3. Moving Stories
+
+<pre>
+project = u.pt_projects.first
+stories = project.stories.all
+story1, story2 = stories[0], stories[1]
+
+# moves story1 before story2
+story1.move(:before => story2)
+
+# moves story2 after story 1
+story2.move(:after  => story1)
+</pre>
+
 h2. Contributing
 
 Step 1: Submit a failing test.
