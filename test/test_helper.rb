@@ -16,7 +16,8 @@ PROJECT_ID  = 153937
 STORY_ID    = 6821071
 RELEASE_ID  = 6821121
 
-PT_BASE_URI = "https://www.pivotaltracker.com/services/v3"
+PT_BASE_PATH = "/services/v3"
+PT_BASE_URI = "https://www.pivotaltracker.com" + PT_BASE_PATH
 { "/projects"                                             => "projects",
   "/projects/#{PROJECT_ID}"                               => "project",
   "/projects/#{PROJECT_ID}/stories"                       => "stories",
