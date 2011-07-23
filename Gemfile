@@ -13,10 +13,8 @@ gem 'yajl-ruby'
 group :development do
   gem 'builder'
 
-  gem "rspec", "2.1.0"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.5.0.pre6"
-  gem "rails_code_qa", ">= 0"
+  gem "jeweler", "~>1.6.0"
+  gem "rails_code_qa"
 end
 
 group :test do
