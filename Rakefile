@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = %Q{Pivotal Tracker API Implementation}
   gem.description = %Q{Just another Pivotal Tracker API Implementation}
-  gem.email = "chiology@gmail.com"
-  gem.authors = ["Matt Todd"]
+  gem.email = ["chiology@gmail.com", "alindeman@gmail.com"]
+  gem.authors = ["Matt Todd", "Andy Lindeman"]
 end
 Jeweler::RubygemsDotOrgTasks.new
 
