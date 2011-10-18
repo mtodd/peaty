@@ -27,7 +27,7 @@ require 'peaty/task'
 
 module Peaty
   
-  VERSION = "0.4.6"
+  VERSION = "0.5.0.beta1"
   
   def self.root
     @root ||= Pathname.new(__FILE__).dirname.parent
