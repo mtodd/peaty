@@ -16,6 +16,11 @@ module Peaty
       Project.with_connection(self.class.connection).find(self.project_id)
     end
 
+    def tasks(options = {})
+      Proxy.new(Task, self.class.connection, options.merge(:project_id => self.project_id,
+                                                           :story_id   => self.id))
+    end
+
     # Moves a story before or after another story
     #
     #     story1.move(:before => story2)

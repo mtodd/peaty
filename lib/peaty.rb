@@ -23,6 +23,7 @@ require 'peaty/project'
 require 'peaty/iteration'
 require 'peaty/story'
 require 'peaty/user'
+require 'peaty/task'
 
 module Peaty
   

@@ -15,23 +15,29 @@ TEST_TOKEN = "test"
 PROJECT_ID  = 153937
 STORY_ID    = 6821071
 RELEASE_ID  = 6821121
+TASK_ID     = 1234
 
-PT_BASE_PATH = "/services/v3"
-PT_BASE_URI = "https://www.pivotaltracker.com" + PT_BASE_PATH
-{ "/projects"                                             => "projects",
-  "/projects/#{PROJECT_ID}"                               => "project",
-  "/projects/#{PROJECT_ID}/stories"                       => "stories",
-  "/projects/#{PROJECT_ID}/iterations"                    => "iterations",
-  "/projects/#{PROJECT_ID}/iterations/done"               => "iterations_done",
-  "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"           => "story",
-  "/projects/#{PROJECT_ID}/stories?filter=type%3Afeature" => "features",
-  "/projects/#{PROJECT_ID}/stories?filter=type%3Arelease" => "releases",
-  "/projects/#{PROJECT_ID}/stories/#{RELEASE_ID}"         => "release",
-  "/projects/#{PROJECT_ID}/stories?filter=type%3Achore"   => "chores",
-  "/projects/#{PROJECT_ID}/stories?filter=type%3Abug"     => "bugs",
-  "/projects/#{PROJECT_ID}/stories?filter=includedone%3Atrue" => "stories_with_done",
-}.each do |(path, fixture)|
-  FakeWeb.register_uri(:get, PT_BASE_URI + path, :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "%s.xml" % fixture)))
+class Test::Unit::TestCase
+  PT_BASE_PATH = "/services/v3"
+  PT_BASE_URI = "https://www.pivotaltracker.com" + PT_BASE_PATH
+
+  def setup
+    { "/projects"                                             => "projects",
+      "/projects/#{PROJECT_ID}"                               => "project",
+      "/projects/#{PROJECT_ID}/stories"                       => "stories",
+      "/projects/#{PROJECT_ID}/iterations"                    => "iterations",
+      "/projects/#{PROJECT_ID}/iterations/done"               => "iterations_done",
+      "/projects/#{PROJECT_ID}/stories/#{STORY_ID}"           => "story",
+      "/projects/#{PROJECT_ID}/stories?filter=type%3Afeature" => "features",
+      "/projects/#{PROJECT_ID}/stories?filter=type%3Arelease" => "releases",
+      "/projects/#{PROJECT_ID}/stories/#{RELEASE_ID}"         => "release",
+      "/projects/#{PROJECT_ID}/stories?filter=type%3Achore"   => "chores",
+      "/projects/#{PROJECT_ID}/stories?filter=type%3Abug"     => "bugs",
+      "/projects/#{PROJECT_ID}/stories?filter=includedone%3Atrue" => "stories_with_done",
+    }.each do |(path, fixture)|
+      FakeWeb.register_uri(:get, PT_BASE_URI + path, :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "%s.xml" % fixture)))
+    end
+  end
 end
 
 class User < Struct.new(:pivotal_tracker_api_key)

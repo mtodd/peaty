@@ -3,9 +3,15 @@ require 'test_helper'
 class PeatyTest < Test::Unit::TestCase
   
   def setup
+    super
+
     RestClient.log = Logger.new(File.join(File.dirname(__FILE__), 'test.log'))
     # All test's use TEST_TOKEN which is a valid API key""
     @user = User.new(TEST_TOKEN)
+  end
+
+  def teardown
+    FakeWeb.clean_registry
   end
   
   # Tests for Projects
@@ -147,5 +153,43 @@ class PeatyTest < Test::Unit::TestCase
     assert !iteration.stories.empty?
     assert_equal project.id, iteration.stories.first.project.id
   end
-  
+
+  # Tests for Tasks
+  def test_user_can_fetch_tasks
+    FakeWeb.register_uri(:get, Regexp.new(PT_BASE_URI + "/projects/#{PROJECT_ID}/stories/#{STORY_ID}/tasks"),
+                               :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "tasks.xml")))
+
+    tasks = @user.pivotal_tracker_projects.find(PROJECT_ID).
+                  stories.find(STORY_ID).
+                  tasks
+
+    assert_equal 1, tasks.all.length
+    assert_equal 1234, tasks.first.id
+    assert_equal "find shields", tasks.first.description
+  end
+
+  def test_user_can_fetch_task
+    FakeWeb.register_uri(:get, Regexp.new(PT_BASE_URI + "/projects/#{PROJECT_ID}/stories/#{STORY_ID}/tasks/#{TASK_ID}"),
+                               :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "task.xml")))
+
+    task = @user.pivotal_tracker_projects.find(PROJECT_ID).
+                 stories.find(STORY_ID).
+                 tasks.find(TASK_ID)
+
+    assert_equal 1234, task.id
+    assert_equal "find shields", task.description
+  end
+
+  def test_user_can_create_task
+    FakeWeb.register_uri(:post, Regexp.new(PT_BASE_URI + "/projects/#{PROJECT_ID}/stories/#{STORY_ID}/tasks"),
+                                :body => File.read(File.join(File.dirname(__FILE__), "fixtures", "create_task.xml")))
+
+    task = @user.pivotal_tracker_projects.find(PROJECT_ID).
+                 stories.find(STORY_ID).
+                 tasks.build(:description => "clean shields")
+
+    assert task.save
+    assert_equal 1234, task.id
+    assert_equal "clean shields", task.description
+  end
 end
